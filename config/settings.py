@@ -46,7 +46,8 @@ INSTALLED_APPS = [
      # Media Cloudinary
     'cloudinary',
     'cloudinary_storage',
-    
+    # My apps
+    'dxd.apps.DxdConfig',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.normpath(os.path.join(BASE_DIR, 'templates')),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

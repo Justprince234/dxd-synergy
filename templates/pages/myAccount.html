@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Css link -->
+  <link rel="stylesheet" href="/css/myAccount.css">
+</head>
+
+<body>
+  <main>
+    <nav class="mb-4">
+      <div class="synergy_logo">
+        <a href="/index.html">
+          <img src="/images/DXD_synergy_logo.jpg" alt="">
+        </a>
+      </div>
+    </nav>
+
+    <section>
+      <div class="signin_header">
+        <div class="join_section">
+          <p>JOIN</p>
+        </div>
+        <div class="signin_section">
+          <a href="/pages/newAccount.html">SIGN IN</a>
+        </div>
+      </div>
+
+      <div class="sign_up_with">
+        <h5>SIGN UP WITH...</h5>
+      </div>
+
+      <div class="sign_up_apps">
+        <div class="">
+          <a href="" class="google_image">
+            <div>
+              <img src="/images/google_image.svg" alt="">
+            </div>
+            GOOGLE
+          </a>
+        </div>
+
+        <div class="">
+          <a href="" class="apple_image">
+            <div>
+              <img src="/images/apple_image.svg" alt="">
+            </div>
+            GOOGLE
+          </a>
+        </div>
+
+        <div class="">
+          <a href="" class="facebook_image">
+            <div>
+              <img src="/images/facebook_image.svg" alt="">
+            </div>
+            GOOGLE
+          </a>
+        </div>
+
+      </div>
+
+      <div>
+        <p class="text-center signing_up_with_social">
+          Signing up with social is super quick. No extra passwords to remember - no brain fail.
+          Don't worry, we'd never share any of your data or post anything on your behalf #notevil
+        </p>
+      </div>
+
+      <div class="sign_up_with_email">
+        <h6 class="text-center">OR SIGN UP WITH EMAIL</h6>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">EMAIL ADDRESS:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          <small id="emailHelp" class="form-text text-muted">We'll send your order confirmation here</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">FIRST NAME:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll send your order confirmation here</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">LAST NAME:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">PASSWORD:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+          <small id="emailHelp" class="form-text text-muted">Must be 10 or more characters</small>
+        </div>
+        <!-- <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+        <div class="form-group date-option-select">
+          <select id='d' class="days" name='day '>
+            <option value="" selected>DD</option>
+          </select>
+          <select id='m' class="months" name='month '>
+            <option value="">Month</option>
+            
+          </select>
+          <select id='y' class="years" name='year '>
+            <option value="">YYYY</option>
+
+          </select>
+        </div>
+
+        <div>
+            <h6 class="interseted_in">MOSTLY INTERESTED IN:</h6>
+        </div>
+
+        <div class="form-group  checkbox_groups">
+          <label class="containers">
+            <span class="womenswear">Womenwears</span>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="containers">
+            <span class="menswear">Menswear</span>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+
+        </div>
+
+        <div class="form-group ">
+          <div class="preferences">
+            <div>
+              <h6 class="contact_preferences">CONTACT PREFERENCES</h6>
+              <small id="emailHelp" class="form-text text-muted tell_us_emails">Tell us which emails you’d like:</small>
+            </div>
+            
+            <button class="selectAll_button" type="checkbox" onClick="toggle(this)"> SELECT ALL</button>
+          </div>
+
+          <div class="select_box_items">
+            <a href="" class="d-flex justify-content-between pb-3">
+              <b>Discounts and sales</b>
+              <input type="checkbox" name="foo" value="bar1">
+            </a>
+
+            <a href="" class="d-flex justify-content-between pb-3">
+              <b>New stuffs</b>
+              <input type="checkbox" name="foo" value="bar2">
+            </a>
+
+            <a href="" class="d-flex justify-content-between pb-3">
+              <b>Your exclusives</b>
+              <input type="checkbox" name="foo" value="bar3">
+            </a>
+
+            <a href="" class="d-flex justify-content-between pb-3">
+              <b>DXD SYNERGY Partners</b>
+              <input type="checkbox" name="foo" value="bar4">
+            </a>
+          </div>
+
+
+        </div>
+
+        <div class="form-group">
+          <button class="start_shopping_button"><a href="">JOIN DXD SYNERGY</a></button>
+
+
+        </div>
+
+      </form>
+
+
+
+    </section>
+
+    <footer>
+      <div class="footer_details">
+        <div class="privacy_policy">
+          <a  href="">Privacy Policy</a>
+        </div>
+        <div class="terms_condition">
+          <a href="">Terms and condition</a>
+        </div>
+      </div>
+
+    </footer>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function toggle(source) {
+      checkboxes = document.getElementsByName('foo');
+      for (var checkbox in checkboxes)
+        checkbox.checked = source.checked;
+    }
+
+    function toggle(source) {
+      checkboxes = document.getElementsByName('foo');
+      for (var i = 0, n = checkboxes.length; i < n; i++) {
+        checkboxes[i].checked = source.checked;
+      }
+    }
+  </script>
+
+
+
+
+  <script src="/myAccount.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
