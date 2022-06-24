@@ -89,15 +89,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASE_URL='postgres://qkjxfinvypbqdl:55eaa603a582290e72af4260b9d8ea9988ce718fc69fc48ba28e7d7edf4ffbaa@ec2-52-72-56-59.compute-1.amazonaws.com:5432/ddu6qfadprd74g'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddu6qfadprd74g',
-        'USER': 'qkjxfinvypbqdl',
-        'PASSWORD': '55eaa603a582290e72af4260b9d8ea9988ce718fc69fc48ba28e7d7edf4ffbaa',
-        'HOST': 'ec2-52-72-56-59.compute-1.amazonaws.com',
-        'PORT': '5432',
-        'OPTIONS': {'sslmode': 'require'},
-    }
 }
 
 # Cloudinary stuff
