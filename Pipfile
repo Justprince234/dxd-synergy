@@ -11,6 +11,10 @@ dj-database-url = "*"
 cloudinary = "*"
 django-cloudinary-storage = "*"
 whitenoise = "*"
+pillow = "*"
+django-countries = "*"
+django-crispy-forms = "*"
+braintree = "*"
 
 [dev-packages]
 

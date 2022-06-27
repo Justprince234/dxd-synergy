@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Css link -->
-  <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
   <!-- <link rel="stylesheet" href="/css/myAccount.css"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,7 @@
     <nav>
       <div class="synergy_logo">
         <a href="/index.html">
-          <img src="/images/DXD_synergy_logo.jpg" alt="">
+          <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
         </a>
       </div>
 
@@ -37,14 +38,14 @@
 
       <div class="col-md-4 bg-white description_content">
         <div class="d-flex justify-content-between pt-4">
-          <h5>1 ITEM</h5>
+          <h5>Review Order</h5>
           <a class="text-decoration-none text-dark" href="/pages/myBag.html">
-            <p>Edit</p>
+            <p></p>
           </a>
         </div>
         <hr>
         <div class="d-flex details_container">
-          <div class="items"><img src="/images/black-sneakers1.jpg" alt=""></div>
+          <div class="items"><img src="{% static 'images/black-sneakers1.jpg' %}" alt=""></div>
           <div>
             <h3 class="pounds">£13.00</h3>
             <p>Synergy sneakers in grey</p>
@@ -66,84 +67,71 @@
 
       <div class="col-md-6">
         <div class="signin_header p-3 mb-2">
-          <h5 class="mb-2">DELIVERY COUNTRY:</h5>
           <div class="d-flex place-items-center">
-            <div class="nigeria_flag"><img src="/images/nigerian_flag.png" alt=""></div>
-            <select name="" id="" class="w-75">
-              <option value="">Nigeria</option>
-            </select>
           </div>
         </div>
 
         <div class=" d-flex justify-content-between bg-white mb-2 p-3 promo_content">
-          <h5>PROMO/STUDENTS CODE OR VOUCHERS</h5>
-          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-        </div>
-
-        <div class="bg-white p-3 mb-1">
-          <h4 class="mb-4">EMAIL ADDRESS</h4>
-
-          <P>princewill1@gmail.com</P>
+          <h5>Delivery Information</h5>
         </div>
 
         <div>
-          <form class="bg-white px-5 py-4">
+          <form class="bg-white px-5 py-4" method="POST" action="">
+            {% csrf_token %}
             <div class="sign_up_with mb-4">
-              <h4 class="mb-3">DELIVERY ADDRESS</h4>
-              <h5>ADD ADDRESS</h5>
             </div>
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">FIRST NAME:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="first_name" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="First name">
             </div>
 
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">LAST NAME:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="last_name" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Last name">
             </div>
 
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold d-md-flex text-muted">MOBILE<small id="emailHelp"
                   class="form-text text-muted pl-md-3">(For delivery
                   updates ):</small> </label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="phone" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="+000 000 0000 000">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">EMAIL:</label>
+              <input ttype="text" name="email"class="form-control w-md-75 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="name@domain.com">
             </div>
 
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">ADDRESS:</label>
-              <input type="text" class="form-control w-md-75 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+              <input type="text" name="address" class="form-control w-md-75 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="">
-              <input type="text" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Optional">
             </div>
 
             <div class="form-group mb-3">
-              <label for="exampleInputEmail1" class="font-weight-bold text-muted">CITY:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">STATE:</label>
+              <input type="text" name="state"class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">POSTAL CODE:</label>
+              <input type="text" name="postal_code" class="form-control w-md-50" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="">
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">COUNTRY</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Optional">
+              <input type="text" name="country" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Country">
             </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="font-weight-bold text-muted">POSTCODE:</label>
-              <input type="email" class="form-control w-md-50" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
-            </div>
-
-            <div class="mb-4 pt-3">
-              <h6 class="interseted_in mb-4">COUNTRY:</h6>
-              <p>Nigeria</p>
 
               <div class="form-group pt-3">
-                <button class="start_shopping_button"><a href="">DELIVER TO THIS ADDRESS</a></button>
+                <button type="submit" class="start_shopping_button"><a href="{% url 'orders:order_create' %}">Proceed to Payment</a></button>
 
               </div>
             </div>
@@ -151,7 +139,7 @@
           </form>
 
 
-          <form class="bg-muted mt-4 py-3">
+          <!-- <form class="bg-muted mt-4 py-3">
             <div class="form-group">
               <input type="text" class="form-control w-100  muted_input" id="exampleInputEmail1"
                 aria-describedby="emailHelp" placeholder="DELIVERY OPTIONS">
@@ -167,12 +155,12 @@
 
             </div>
 
-          </form>
-          <div class="w-75">
+          </form> -->
+          <div class="w-75 mt-3">
             <p class="text-muted privacy_policy">
               By placing your order you agree to our <a href="">Terms and condition,</a><a href=""> Privacy</a> and
-              <a href="">returns Policy</a> . You also consent
-              to some of your data being stored by ASOS, which may be used to make future shopping experiences better
+              <a href="">returns Policy.</a>  You also consent
+              to some of your data being stored by SYNERGY, which may be used to make future shopping experiences better
               for you.
             </p>
           </div>
@@ -236,7 +224,7 @@
 
 
 
-  <script src="/myAccount.js"></script>
+  <script src="{% static 'js/myAccount.js' %}"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -54,10 +54,10 @@
                     </a>
                 </div>
 
-                <li class="women_section"><a class="fashion_category" data-rel="#content-e"
-                        href="/sub_category/women.html">WOMEN</a></li>
+                <li class="women_section" ><a class="fashion_category" data-rel="#content-e"
+                        href="{% url 'o:order_create' %}">WOMEN</a></li>
                 <li class="men_section"><a class="fashion_category" data-rel="#content-f"
-                        href="/sub_category/men.html">MEN</a></li>
+                        href="">MEN</a></li>
                
                 <form action="" class="py-2 form1">
                     <div class="form-group input_field_area mb-0">
@@ -74,8 +74,8 @@
                 </li>
 
                 <li class="li_suitcase">
-                    <a href="/myOrders.html">
-                        <i class="fa fa-shopping-bag checkout_suitcase" aria-hidden="true"></i>
+                    <a href="{% url 'orders:order_create' %}">
+                        <i class="fa fa-cart-plus checkout_suitcase" aria-hidden="true"></i>
                         <!-- <img src="/images/suitcase.jpg" alt="" class="checkout_suitcase"> -->
                     </a>
                 </li>
@@ -220,7 +220,6 @@
         </div>
 
         <!-- /****************  WOMEN FASHION SECTION ****************** */ -->
-
         <div id="content-e" class="category">
             <div class="outlet_discount_women">
                 <h2>OUTLET</h2>

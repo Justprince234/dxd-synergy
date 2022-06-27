@@ -27,6 +27,10 @@ img {
     margin-bottom: 20px;
 }
 
+section > div > div {
+    place-items: center;
+}
+
 .carousel-inner{
     min-height: 35rem;
     background-color: #f9f9f9;
@@ -71,11 +75,13 @@ img {
 
 .add_to_bag{
     border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 5px 20px;
     color: white;
     font-weight: 700;
-    width: 67%;
-    font-size: 12px;
+    width: 80%;
+    font-size: 10px;
     background-color: rgb(1,136,73);
 }
 
@@ -106,8 +112,10 @@ img {
     margin-left: 10.5rem;
 }
 
-.might_like_container li {
+.might_like_container ul  li {
     list-style-type: none;
+    height: fit-content;
+    margin-bottom: 30px;
 }
 
 .might_like_sub-container {
@@ -120,10 +128,28 @@ img {
 .leg_wear {
     height: 70%;
     width: 90%;
+    margin: auto;
+}
+
+.might_like_details {
+    width: 90%;
+    margin: auto;
+    
+}
+
+small {
+    padding-bottom: 10px;
+    display: block;
+    width: 95%;
 }
 
 .viewed_section {
     margin: 0 11rem;
+}
+
+.filters_container {
+    position: sticky;
+    top: 0;
 }
 
 .clear_all_button {
@@ -187,6 +213,24 @@ img {
 /* ****************MEDIA QUERY******************* */
 
 @media (max-width:768px) {
+
+    .add_to_bag{
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        color: white;
+        font-weight: 700;
+        width: 90%;
+        font-size: 9px;
+        background-color: rgb(1,136,73);
+    }
+    
+
+    .select_filters{
+        display: none;
+    }
+
     .side_image_container{
         display: none;
     }
