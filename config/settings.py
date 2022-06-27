@@ -140,7 +140,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-DISABLE_COLLECTSTATIC=1
+DISABLE_COLLECTSTATIC=True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
