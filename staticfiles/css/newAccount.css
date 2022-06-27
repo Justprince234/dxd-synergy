@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(238,238,238);
+
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    padding: 10px;
+    padding-top: 70px;
+    width: 320px;
+    margin: auto;
+}
+
+section{
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+}
+
+nav{
+    margin: auto;
+}
+
+.synergy_logo {
+    width: 5rem;
+    margin: auto;
+}
+
+
+.sign_up_apps{
+    display: flex;
+    place-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+ 
+
+.google_image > div{
+    width: 2rem;
+}
+
+.google_image{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    font-weight: 600;
+    justify-content: stretch;
+    column-gap: 5rem;
+    padding: 5px 20px  5px 30px;
+    place-items: center;
+    border: 2px solid silver;
+}
+
+.create_new_account{
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.not_you{
+    font-weight: 700;
+}
+
+.create_new_account a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(151, 150, 150);
+    font-size: 11px;
+}
+
+
+/* footer */
+
+.footer_details{
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 1px solid; */
+}
+
+.privacy_policy a{
+    text-align: center;
+    /* padding-bottom: 20px; */
+    text-decoration: underline;
+    padding: 2px 5px;
+    color: rgb(112, 112, 112);
+    font-size: 12px;
+}
+
+.terms_condition{
+    /* border-bottom: 1px solid silver; */
+    text-align: center;
+}
+
+.terms_condition a{
+    border-left: 1px solid silver;
+    text-decoration: underline;
+    padding: 2px 5px;
+    color: rgb(112, 112, 112);
+    font-size: 12px;
+}
+
+
+
+
+
+
+
