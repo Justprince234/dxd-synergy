@@ -14,14 +14,14 @@ def home(request):
     return render(request, template_name, context)
 
 def products(request):
-    template_name = "pages/products.html"
+    template_name = "pages/productDescription.html"
     return render(request, template_name)
 
 def products_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-    template_name = 'pages/products.html'
+    template_name = 'pages/shopping.html'
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
@@ -30,4 +30,4 @@ def products_list(request, category_slug=None):
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()
-    return render(request, 'gallery/art/product.html', {'product': product, 'cart_product_form': cart_product_form})
+    return render(request, 'pages/productDescription.html', {'product': product, 'cart_product_form': cart_product_form})

