@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+
+    background-color: rgb(242, 242, 242);
+}
+
+button .active {
+    border-bottom: 2px solid black;
+}
+
+section {
+    width: 70%;
+    background-color: rgb(242, 242, 242);
+    margin: auto;
+}
+
+@media (max-width:768px) {
+    section {
+        width: 100%;
+        background-color: rgb(242, 242, 242);
+        margin: auto;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+
+}
+
+header>h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header > div > a > img {
+    width: 3rem;
+}
+
+header>p {
+    font-size: 12px;
+}
+
+.delivery_container>div>button {
+    border: none;
+    padding: 10px 15px;
+}
+
+.delivery_container>div>.flag {
+    width: 2rem;
+    height: 2rem;
+}
+
+.delivery_container > div > div > div img {
+    width: 20px;
+}
+
+.delivery .active {
+    border-bottom: 2px solid black;
+    
+    
+}
+
+.sub_delivery_content>div>button {
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+.sub_delivery_content>div>button.active {
+  border-bottom: 2px solid black;
+  font-weight: 600;
+}
+
+
+.sub_delivery_content>div:nth-child(2) {
+    /* border-bottom: 1px solid silver; */
+    color: silver; 
+}
+
+
+.delivery_date div:nth-child(2) {
+    background-color: rgb(191, 223, 235);
+}
+
+.more_info_container2 {
+    background-color: rgb(191, 223, 235);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.more_info>div>a>div {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+
+.more_info>h6 {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.more_info>div>a {
+    color: black;
+    text-decoration: underline;
+}
+
+small {
+    font-size: 12px;
+}
+
+.bottom_of_footer {
+    background-color: rgb(221, 221, 221);
+    padding: 10px 0;
+}
+
+.bottom_of_footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.bottom_of_footer .privacy_and_cookies,
+.terms_and_condition {
+    border-right: 1px solid rgb(131, 129, 129);
+
+}
+
+.bottom_of_footer .copyright {
+    font-size: 12px;
+    padding-left: 25px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.cookies {
+    display: flex;
+    justify-content: end;
+}
+
+
+@media (max-width: 768px) {
+    .bottom_of_footer {
+        text-align: center;
+    }
+
+    .cookies {
+        justify-content: center;
+    }
+
+}
