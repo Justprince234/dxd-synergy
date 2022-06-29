@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third party apps
     'crispy_forms',
-    'braintree',
     # Media Cloudinary
     'cloudinary',
     'cloudinary_storage',
@@ -54,7 +53,8 @@ INSTALLED_APPS = [
     'dxd.apps.DxdConfig',
     'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
-    'payments.apps.PaymentsConfig'
+    'payments.apps.PaymentsConfig',
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -139,19 +139,23 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR /'static'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'staticfiles'),
+# ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'photos/')
 MEDIA_URL = '/photos/'
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type

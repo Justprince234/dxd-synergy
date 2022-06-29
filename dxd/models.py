@@ -26,6 +26,7 @@ class Product(models.Model):
     photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    color = models.CharField(max_length=50, default="Blue")
     category = models.ForeignKey(Category, related_name="products", on_delete=models.CASCADE)
     description = models.TextField()
     price = models.FloatField()
@@ -35,4 +36,4 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('dxd:product_detail', args=[self.id, self.slug])
+        return reverse('dxd:product', args=[self.id, self.slug])
