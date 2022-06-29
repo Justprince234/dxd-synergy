@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import braintree
 from pathlib import Path
 import os
 import sys
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third party apps
     'crispy_forms',
+    'braintree',
     # Media Cloudinary
     'cloudinary',
     'cloudinary_storage',
@@ -143,7 +145,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'photos/')
@@ -156,3 +158,19 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Heroku settings.
+import django_heroku
+django_heroku.settings(locals())
+
+# Braintree settings
+BRAINTREE_MERCHANT_ID = 'q9p7zmtw9ps79qc6'
+BRAINTREE_PUBLIC_KEY = 'h36pv5nn7mhswrr7'
+BRAINTREE_PRIVATE_KEY = '5f61d9c5599c9f7ea6ea529c8701cda0'
+
+BRAINTREE_CONF = braintree.Configuration(
+braintree.Environment.Sandbox,
+BRAINTREE_MERCHANT_ID,
+BRAINTREE_PUBLIC_KEY,
+BRAINTREE_PRIVATE_KEY
+)
