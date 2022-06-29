@@ -14,7 +14,6 @@ whitenoise = "*"
 pillow = "*"
 django-countries = "*"
 django-crispy-forms = "*"
-braintree = "*"
 
 [dev-packages]
 
