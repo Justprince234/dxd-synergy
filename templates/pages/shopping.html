@@ -478,32 +478,33 @@
                         <hr>
                         <div class="might_like_container">
                             <div class="d-flex justify-content-between px-2 pb-3">
-                                <h5 class="font-weight-bold">PRODUCTS</h5>
+                                <h5 class="font-weight-bold">Results</h5>
                                 <div class="pr-2">
-                                </div>
                             </div>
+                        </div>
 
                             <!--********************************************************************************************-->
                             <!--********************** ADDED CAROUSEL TO ALL THE IMAGES IN THIS SECTION ***************************-->
                             <!--*******************************************************************************************-->
                             <ul class="might_like_sub-container">
-                               
                                 <li>
+                                    {% for product in products %}
                                     <div id="myCarousel" class="carousel slide">
                                         <!-- Wrapper for carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="image1" src="{% static 'images/sneakers1.PNG' %}" alt="First Slide">
+                                            <!-- <div class="carousel-item active"> -->
+                                                <a href="{% url 'dxd:product' product.id %}">
+                                                    <img class="image1" src="{{product.photo_main.url}}" alt="">
+                                                </a>
                                             </div>
     
-                                            <div class="carousel-item bg-dark">
-                                                <img src="{% static 'images/sneakers1.PNG' %}" alt="Second Slide">
+                                            <!-- <div class="carousel-item bg-dark">
+                                                <img src="/images/sneakers1.PNG" alt="Second Slide">
                                             </div>
     
                                             <div class="carousel-item">
-                                                <img src="{% static 'images/sneakers1.PNG' %}" alt="Third Slide">
-                                            </div>
-                                        </div>
+                                                <img src="/images/sneakers1.PNG" alt="Third Slide">
+                                            </div> -->
     
                                         <!-- Carousel controls -->
                                         <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -518,14 +519,13 @@
                                     <div class="might_like_details">
                                         <button class="add_to_bag"><a href="/pages/myBag.html">ADD TO CART</a></button>
                                         <div class="d-flex justify-content-between w-100">
-                                            <h6>Suede Black</h6>
-                                            <p class=" font-weight-bold pb-0">$80.00</p>
+                                            <h6>{{product.name}}</h6>
+                                            <p class=" font-weight-bold pb-0">N {{product.price}}</p>
                                         </div>
-                                        <small class="text-danger d-block">EXCLUDED FROM DISCOUNT</small>
-                                        <p class="bg-dark text-white py-1 px-2 d-inline font-weight-bold pb-0">NEW</p>
+                                        <small class="text-danger d-block">{{product.description}}</small>
                                     </div>
+                                    {% endfor %}
                                 </li>
-
                             </ul>
 
                              <!--********************************************************************************************-->
@@ -554,34 +554,34 @@
                     </div>
 
                     <div class="hero_section_image_women">
-                        <img src="/images/topwoman_image.jpg" alt="">
+                        <img src="{% static 'images/topwoman_image.jpg' %}" alt="">
                     </div>
 
                     <div class="topwomen_images_clothing">
                         <div>
                             <div class="">
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
@@ -601,7 +601,7 @@
                     <div class="topwomen_images_clothing2">
                         <div>
                             <div class="">
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>CRAFTY WERK</h6>
                             <p>Textural Healing</p>
@@ -609,7 +609,7 @@
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topwomen_img.jpg" alt="">
+                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
                             </div>
                             <h6>DELIGHT SUMMER</h6>
                             <p>Laid back looks</p>
@@ -667,34 +667,34 @@
                     </div>
 
                     <div class="hero_section_image mb-3">
-                        <img src="/images/topman_image.jpg" alt="">
+                        <img src="{% static 'images/topman_image.jpg' %}" alt="">
                     </div>
 
                     <div class="topmen_images_clothing">
                         <div>
                             <div class="">
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>ADIDAS ORIGINAL</h6>
                             <p>3 stripes and you're in</p>
@@ -714,7 +714,7 @@
                     <div class="topmen_images_clothing2">
                         <div>
                             <div class="">
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>CRAFTY WERK</h6>
                             <p>Textural Healing</p>
@@ -722,7 +722,7 @@
                         </div>
                         <div>
                             <div>
-                                <img src="/images/topmen_img.jpg" alt="">
+                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
                             </div>
                             <h6>DELIGHT SUMMER</h6>
                             <p>Laid back looks</p>
@@ -791,14 +791,14 @@
                     </div>
 
                     <div class="d-md-flex footer_information">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <h6>HELP & INFORMATION</h6>
                             <p><a href="">Help</a></p>
                             <p><a href="">Track order</a></p>
                             <p><a href="">Delivery & returns</a></p>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <h6>ABOUT DXD SYNERGY</h6>
                             <p><a href="">About us</a></p>
                             <p><a href="">Careers at DXD SYNERGY</a></p>
@@ -806,21 +806,12 @@
                             <p><a href="">Investors' site</a></p>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <h6>MORE FROM DXD SYNERGY</h6>
                             <p><a href="">Mobile and DXD SYNERGY apps</a></p>
                             <p><a href="">DXD SYNERGY Marketplace</a></p>
                             <p><a href="">Gift vouchers</a></p>
                             <p><a href="">Black Friday</a></p>
-                        </div>
-
-                        <div class="col-md-3">
-                            <h6>SHOPPING FROM:</h6>
-                            <a href="">
-                                You're in <span><img class="footer_flag" src="/images/nigerian_flag.png" alt=""></span>
-                                <span>Change</span>
-
-                            </a>
                         </div>
                     </div>
 
