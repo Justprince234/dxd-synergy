@@ -1,291 +1,10 @@
+{% extends "pages/base.html" %}
 {% load static %}
-<!doctype html>
-<html lang="en">
 
-<head>
-    <title>DXD SYNERGY</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% block content %}
     <link rel="stylesheet" href="{% static 'css/shopping.css' %}">
-    <link rel="shortcut icon" href="{% static 'images/DXD_synergy_logo.jpg' %}" type="image/x-icon">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-</head>
-
-<body>
-    <main>
-        <div class="top_navbar">
-            <ul>
-                <li class="market_place">
-                    <a href="">Marketplace</a>
-                </li>
-
-                <li>
-                    <a href="">Help & FAQs</a>
-                </li>
-
-                <li>
-                    <a href=""><img src="{% static 'images/nigerian_flag.png' %}" alt=""></a>
-                </li>
-            </ul>
-        </div>
-
-
-
-        <!--************** MAIN NAVBAR SECTION***************** -->
-
-        <nav class="main_navbar">
-            <ul class="navbars">
-                <div class="navbrand_logo">
-                    <a class="fashion_category active" data-rel="#content-d" href="/index.html">
-                        <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
-                    </a>
-                </div>
-
-                <li class="women_section dropdowns">
-                    
-                    <a class="fashion_category dropbtns" data-rel="#content-e"
-                        href="/sub_category/women.html">WOMEN
-                    </a>
-
-                    
-                    <div class="dropdown-contents">
-                        <!-- <div class="headers">
-                          <h2>Mega Menu</h2>
-                        </div>    -->
-                        <div class="rows">
-                            <div class="columns">
-                              <!-- <h5>Shoes</h5> -->
-                              <h6><a href="">New Arrivals</a></h6>
-                              <h6><a href="">Best Sellers</a></h6>
-                              <h6><a href="">Summer</a></h6>
-                              <h6><a href="">Travels</a></h6>
-                              <h6><a href="">Gifts</a></h>
-                            
-                              
-                            </div>
-                            <div class="columns">
-                                <h5><a href="" class="">Clothing</a></h5>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                            </div>
-                            <div class="columns">
-                              <h5><a href="" class="">Shoes</a></h5>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                            </div>
-                            <div class="columns">
-                              <h5><a href="">Accessories</a></h5>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              
-                            </div>
-                          </div>
-                      </div>
-
-
-                    </li>
-
-                <li class="men_section dropdowns ">
-                    <a class="fashion_category dropbtns" data-rel="#content-f"
-                        href="/sub_category/men.html">MEN
-                    </a>
-
-                    <div class="dropdown-contents">
-                        <!-- <div class="headers">
-                          <h2>Mega Menu</h2>
-                        </div>    -->
-                        <div class="rows">
-                            <div class="columns">
-                              <!-- <h5>Shoes</h5> -->
-                            <h6><a href="">New Arrivals</a></h6>
-                            <h6><a href="">Best Sellers</a></h6>
-                            <h6><a href="">Summer</a></h6>
-                            <h6><a href="">Travels</a></h6>
-                            <h6><a href="">Gifts</a></h>
-                            
-                              
-                              
-                            </div>
-                            <div class="columns">
-                                <h5><a href="" class="">Clothing</a></h5>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                              <a href="#">T-shirts</a>
-                            </div>
-                            <div class="columns">
-                              <h5><a href="" class="">Shoes</a></h5>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                              <a href="#">Sneakers</a>
-                            </div>
-                            <div class="columns">
-                              <h5><a href="">Accessories</a></h5>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              <a href="#">Wristwatch</a>
-                              
-                            </div>
-                          </div>
-                      </div>
-
-
-
-                    </li>
-               
-                <form action="" class="py-2 form1">
-                    <div class="form-group input_field_area mb-0">
-                        <input type="text" class="form-control form-control-sm"
-                            placeholder="Search for items and brands" name="text1">
-                        <i class="fa fa-search search_icon" aria-hidden="true"></i>
-                    </div>
-                </form>
-
-                <!-- <li class="li_user_icon">
-                    <a href="/pages/myAccount.html" class="empty_face">
-                        <i class="fa fa-user user_icon" aria-hidden="true"></i>
-                    </a>
-                </li> -->
-
-                <li class="li_suitcase pr-3">
-                    <a href="/pages/shopping.html">
-                        <i class="fa fa-cart-plus checkout_suitcase" aria-hidden="true"></i>
-                    </a>
-                </li>
-
-                <li class="li_suitcase">
-                    <a href="/pages/myOrders.html">
-                        <i class="fa fa-shopping-bag checkout_suitcase" aria-hidden="true"></i>
-                        <!-- <img src="/images/suitcase.jpg" alt="" class="checkout_suitcase"> -->
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-
-
-        <!-- *****************SIDEBAR SECTION************************ -->
-
-        <div class="sidebar">
-            <input type="checkbox" id="click">
-            <label for="click" class="togglebar">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </label>
-
-
-            <ul>
-                <div class="toggle_button_container">
-                    <li class="li_women">
-                        <button class="button active" data-rel="#content-a"
-                            href="/sub_category/women.html">WOMEN</button>
-                    </li>
-                    <li class="li_men">
-                        <button class="button" data-rel="#content-b" href="/sub_category/men.html">MEN</button>
-                    </li>
-
-                </div>
-
-                <div class="px-3">
-
-                    <div class="container px-0 mt-2" id="content-a">
-                        <li class="sidebar_home_image_women py-2">
-                            <a class="" href="/index.html">HOME</a>
-                        </li>
-
-                        <li class="sales_discount">
-                            <p class="pt-4 pl-3">
-                                SALE UP TO 70% <br> OFF
-                            </p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>NEW IN</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>CLOTHING</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>DRESSES</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>SHOES</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>SPORTWEARS</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>ACCESSORIES</p>
-                        </li>
-                        <li class="sidebar_image_items_women py-4 mt-2">
-                            <p>SUMMER</p>
-                        </li>
-                    </div>
-
-                    <div class="container px-0 mt-2" id="content-b">
-                        <li class="sidebar_home_image_men py-2">
-                            <a class="" href="/index.html">HOME</a>
-                        </li>
-
-                        <li class="sales_discount">
-                            <p class="pt-4 pl-3">
-                                SALE UP TO 70% <br> OFF
-                            </p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>NEW IN</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>CLOTHING</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>DRESSES</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>SHOES</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>SPORTWEARS</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>ACCESSORIES</p>
-                        </li>
-                        <li class="sidebar_image_items_men py-4 mt-2">
-                            <p>SUMMER</p>
-                        </li>
-                    </div>
-                </div>
-
-            </ul>
-
-        </div>
+    <!-- CSS SWEET ALERT LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 
 
         <!--********************** HERO SECTION   *************************** -->
@@ -315,33 +34,11 @@
                     <section>
                         <div class="d-flex justify-content-between pt-3 pb-2 filters_container bg-white">
                             <div class="d-flex place-items-center pb-3 pl-3">
-                                <h6 class="filters mx-1">Filters</h6>
-                                <!-- <i class="fa fa-tasks" aria-hidden="true"></i> -->
-                                <svg width="1.38rem" height="1.38rem" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12a1 1 0 011 1v4a1 1 0 01-2 0v-4a1 1 0 011-1zm12 2a1 1 0 010 2h-8a1 1 0 010-2h8zM5 14a1 1 0 010 2H3a1 1 0 010-2h2zm10-9a1 1 0 011 1v4a1 1 0 01-2 0V6a1 1 0 011-1zm6 2a1 1 0 010 2h-2a1 1 0 010-2h2zM11 7a1 1 0 010 2H3a1 1 0 110-2h8z" fill="#181818" fill-rule="nonzero"></path></svg>
-                                <h6 class="filters mx-1">(0)</h6>
                                 <div class="select_filters pl-3">
         
                                     <div class="d-flex justify-content-center align-items-center mr-2">
         
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-expanded="false">
-                                                <span>Gender</span>
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id=""> Men
-                                                        [535]</a></li>
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id="">
-                                                        Women [535]</a></li>
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id="">
-                                                        Unisex [535]</a></li>
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id=""> Boys
-                                                        [535]</a></li>
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id="">
-                                                        Girls [535]</a></li>
-        
-                                            </ul>
                                         </div>
         
         
@@ -349,17 +46,6 @@
                                     <div class="d-flex justify-content-center align-items-center mr-2">
         
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-expanded="false">
-                                                <span>Category</span>
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id="">
-                                                        Shoes [350]</a></li>
-                                                <li><a class="dropdown-item" href="#"><input type="checkbox" name="" id="">
-                                                        Clothing [387]</a></li>
-                                            </ul>
                                         </div>
         
         
@@ -367,22 +53,6 @@
                                     <div class="d-flex justify-content-center align-items-center mr-2">
         
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-expanded="false">
-                                                <span>Size</span>
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <div class="row p-1 mx-3 dropdown_size">
-                                                    <li class="border"><a class="dropdown-item" href="#">1.46</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                    <li class="border"><a class="dropdown-item" href="#">7.56</a></li>
-                                                </div>
-                                            </ul>
                                         </div>
         
         
@@ -390,23 +60,6 @@
                                     <div class="d-flex justify-content-center align-items-center mr-2">
         
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-expanded="false">
-                                                <span>Color</span>
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <div class="row dropdown_colors_container p-1 mx-3">
-                                                    <li><a class="dropdown-item dropdown_colors bg-danger" href="#"> </a>Red[327]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-secondary" href="#"> </a>Gray[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-info" href="#"></a>Blue[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-warning" href="#"></a>Yellow[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-success" href="#"></a>Green[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-white" href="#"></a>White[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-light" href="#"></a>Sliver[352]</li>
-                                                    <li><a class="dropdown-item  dropdown_colors bg-dark" href="#"></a>Black[352]</li>
-                                                </div>
-                                            </ul>
                                         </div>
         
         
@@ -414,23 +67,6 @@
                                     <div class="d-flex justify-content-center align-items-center mr-2">
         
                                         <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-expanded="false">
-                                                <span>Prize</span>
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#"><input type="radio" name="" id=""> 
-                                                    $0 - $100</a></li>
-                                            <li><a class="dropdown-item" href="#"><input type="radio" name="" id="">
-                                                $100 - $150</a></li>
-                                            <li><a class="dropdown-item" href="#"><input type="radio" name="" id="">
-                                                    $150 - $200</a></li>
-                                            <li><a class="dropdown-item" href="#"><input type="radio" name="" id=""> 
-                                                    $200 - $250</a></li>
-                                            <li><a class="dropdown-item" href="#"><input type="radio" name="" id="">
-                                                    $250 - $300</a></li>
-                                            </ul>
                                         </div>
         
         
@@ -463,10 +99,14 @@
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <option value="">Sort By</option>
-                                            <option value="">Top Sellers</option>
-                                            <option value="">Newest</option>
-                                            <option value="">Price Low to High</option>
-                                            <option value="">Price High to Low</option>
+                                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                                         </ul>
                                     </div>
                 
@@ -478,7 +118,7 @@
                         <hr>
                         <div class="might_like_container">
                             <div class="d-flex justify-content-between px-2 pb-3">
-                                <h5 class="font-weight-bold">Results</h5>
+                                <h5 class="font-weight-bold">{{category.name}} Category</h5>
                                 <div class="pr-2">
                             </div>
                         </div>
@@ -486,45 +126,59 @@
                             <!--********************************************************************************************-->
                             <!--********************** ADDED CAROUSEL TO ALL THE IMAGES IN THIS SECTION ***************************-->
                             <!--*******************************************************************************************-->
-                            <ul class="might_like_sub-container">
-                                <li>
-                                    {% for product in products %}
-                                    <div id="myCarousel" class="carousel slide">
-                                        <!-- Wrapper for carousel items -->
-                                        <div class="carousel-inner">
-                                            <!-- <div class="carousel-item active"> -->
-                                                <a href="{% url 'dxd:product' product.id %}">
-                                                    <img class="image1" src="{{product.photo_main.url}}" alt="">
-                                                </a>
+                            <ul class="">
+                                <li class="">
+                                    <div class="might_like_sub-container">
+                                        {% for product in products %}
+                                        <div id="myCarousel" class="carousel slide">
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner">
+                                                <!-- <div class="carousel-item active"> -->
+                                                    <a href="{{product.get_absolute_url}}">
+                                                        <img class="image1" src="{{product.photo_main.url}}" alt="">
+                                                    </a>
+                                                </div>
+        
+                                                <!-- <div class="carousel-item bg-dark">
+                                                    <img src="/images/sneakers1.PNG" alt="Second Slide">
+                                                </div>
+        
+                                                <div class="carousel-item">
+                                                    <img src="/images/sneakers1.PNG" alt="Third Slide">
+                                                </div> -->
+        
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                            <div class="might_like_details">
+                                                
+                                                <div class="d-flex justify-content-between w-100">
+                                                    <a class="text-decoration-none" href="{{product.get_absolute_url}}"><h5 class="font-weight-bold product_name">{{product.name}}</h5></a>
+                                                    
+                                                </div>
+                                                <h5 class=" font-weight-bold pb-0">N {{product.price}}</h5>
+                                                <small class="text-dark font-weight-bold d-block">{{product.description}}</small>
                                             </div>
-    
-                                            <!-- <div class="carousel-item bg-dark">
-                                                <img src="/images/sneakers1.PNG" alt="Second Slide">
-                                            </div>
-    
-                                            <div class="carousel-item">
-                                                <img src="/images/sneakers1.PNG" alt="Third Slide">
-                                            </div> -->
-    
-                                        <!-- Carousel controls -->
-                                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                                            <span class="carousel-control-next-icon"></span>
-                                        </a>
-                                    </div>
-
-                                    <!-- <div class="leg_wear"> <img src="/images/leg-wear.jpg" alt=""></div> -->
-                                    <div class="might_like_details">
-                                        <button class="add_to_bag"><a href="/pages/myBag.html">ADD TO CART</a></button>
-                                        <div class="d-flex justify-content-between w-100">
-                                            <h6>{{product.name}}</h6>
-                                            <p class=" font-weight-bold pb-0">N {{product.price}}</p>
                                         </div>
-                                        <small class="text-danger d-block">{{product.description}}</small>
+    
+                                        <!-- <div class="leg_wear"> <img src="/images/leg-wear.jpg" alt=""></div> -->
+                                        <!-- <div class="might_like_details">
+                                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="add_to_bag"><a>Add to Cart</a></button>
+                                            </form>
+                                            <div class="d-flex justify-content-between w-100">
+                                                <a href="{{product.get_absolute_url}}"><h6>{{product.name}}</h6></a>
+                                                <p class=" font-weight-bold pb-0">N {{product.price}}</p>
+                                            </div>
+                                            <small class="text-danger d-block">{{product.description}}</small>
+                                        </div> -->
+                                        {% endfor %}
                                     </div>
-                                    {% endfor %}
                                 </li>
                             </ul>
 
@@ -539,380 +193,6 @@
 
 
                 </div>
+                <script src="{% static 'js/shopping.js' %}"></script>
 
-                <!-- /****************  WOMEN FASHION SECTION ****************** */ -->
-
-                <div id="content-e" class="category">
-                    <div class="outlet_discount_women">
-                        <h2>OUTLET</h2>
-                        <h3>
-                            20% OFF 1500 STYLES! <br> ALREADY UP TO 70% OFF
-                        </h3>
-                        <h6>With code: STYLES </h6>
-                        <p>Outlet items only. See websites banner for Ts%Cs. Selected marked products excluded from
-                            promo</p>
-                    </div>
-
-                    <div class="hero_section_image_women">
-                        <img src="{% static 'images/topwoman_image.jpg' %}" alt="">
-                    </div>
-
-                    <div class="topwomen_images_clothing">
-                        <div>
-                            <div class="">
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                    </div>
-
-                    <div class="outlet_discount_women">
-                        <h2>OUTLET</h2>
-                        <h3>
-                            20% OFF 1500 STYLES! <br> ALREADY UP TO 70% OFF
-                        </h3>
-                        <h6>With code: STYLES </h6>
-                        <p>Outlet items only. See websites banner for Ts%Cs. Selected marked products excluded from
-                            promo</p>
-                    </div>
-
-                    <div class="topwomen_images_clothing2">
-                        <div>
-                            <div class="">
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>CRAFTY WERK</h6>
-                            <p>Textural Healing</p>
-                            <button>DXD SYNERGY DESIGN</button>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topwomen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>DELIGHT SUMMER</h6>
-                            <p>Laid back looks</p>
-                            <button>DXD SYNERGY DESIGN</button>
-                        </div>
-
-                    </div>
-
-                    <!-- ******** TRENDING BRANDS WOMEN SECTION ******* -->
-
-                    <div class="trending_brands_women_section">
-                        <h1>TRENDING BRANDS</h1>
-                        <div class="brand_logos_women">
-                            <div class="brand_logos_image_women">
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div class="brand_logos_image_women">
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!--******************* MEN FASHION SECTION *************************** -->
-
-                <div id="content-f" class="category">
-                    <div class="outlet_discount">
-                        <h2>OUTLET</h2>
-                        <h3>
-                            20% OFF 1500 STYLES! <br> ALREADY UP TO 70% OFF
-                        </h3>
-                        <h6>With code: STYLES </h6>
-                        <p>Outlet items only. See websites banner for Ts%Cs. Selected marked products excluded from
-                            promo</p>
-                    </div>
-
-                    <div class="hero_section_image mb-3">
-                        <img src="{% static 'images/topman_image.jpg' %}" alt="">
-                    </div>
-
-                    <div class="topmen_images_clothing">
-                        <div>
-                            <div class="">
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>ADIDAS ORIGINAL</h6>
-                            <p>3 stripes and you're in</p>
-                        </div>
-                    </div>
-
-                    <div class="outlet_discount">
-                        <h2>OUTLET</h2>
-                        <h3>
-                            20% OFF 1500 STYLES! <br> ALREADY UP TO 70% OFF
-                        </h3>
-                        <h6>With code: STYLES </h6>
-                        <p>Outlet items only. See websites banner for Ts%Cs. Selected marked products excluded from
-                            promo</p>
-                    </div>
-
-                    <div class="topmen_images_clothing2">
-                        <div>
-                            <div class="">
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>CRAFTY WERK</h6>
-                            <p>Textural Healing</p>
-                            <button>DXD SYNERGY DESIGN</button>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="{% static 'images/topmen_img.jpg' %}" alt="">
-                            </div>
-                            <h6>DELIGHT SUMMER</h6>
-                            <p>Laid back looks</p>
-                            <button>DXD SYNERGY DESIGN</button>
-                        </div>
-
-                    </div>
-
-                    <!-- /* TRENDING BRANDS SECTION MEN*/ -->
-
-                    <div class="trending_brands_section">
-                        <h1>TRENDING BRANDS</h1>
-                        <div class="brand_logos">
-                            <div class="brand_logos_image">
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                            <div>
-                                <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/nike-hp-logos-256x256.jpg"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <footer>
-                    <div class="icons_and_images">
-                        <ul class="font_awesome_icons">
-                            <a href=""><i class="fa fa-facebook-official facebook_icon" aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-instagram instagram_icon" aria-hidden="true"></i></a>
-                            <a href=""><i class="fa fa-snapchat-ghost snapchat_icon" aria-hidden="true"></i></a>
-                        </ul>
-
-                        <ul class="electronic_images">
-                            <li class="visa_image"><img src="https://images.asos-media.com/navigation/visa-png" alt="">
-                            </li>
-                            <li class="mastercard_image"><img
-                                    src="https://images.asos-media.com/navigation/mastercard-png" alt="">
-                            </li>
-                            <li class="pay-pal_image"><img src="https://images.asos-media.com/navigation/pay-pal-png"
-                                    alt="">
-                            </li>
-                            <li class="american-express_image"><img
-                                    src="https://images.asos-media.com/navigation/american-express-png" alt=""></li>
-                            <li class="visa-electron_image"><img
-                                    src="https://images.asos-media.com/navigation/visa-electron-png" alt=""></li>
-                        </ul>
-                    </div>
-
-                    <div class="d-md-flex footer_information">
-                        <div class="col-md-4">
-                            <h6>HELP & INFORMATION</h6>
-                            <p><a href="">Help</a></p>
-                            <p><a href="">Track order</a></p>
-                            <p><a href="">Delivery & returns</a></p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6>ABOUT DXD SYNERGY</h6>
-                            <p><a href="">About us</a></p>
-                            <p><a href="">Careers at DXD SYNERGY</a></p>
-                            <p><a href="">Corporate responsiblity</a></p>
-                            <p><a href="">Investors' site</a></p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6>MORE FROM DXD SYNERGY</h6>
-                            <p><a href="">Mobile and DXD SYNERGY apps</a></p>
-                            <p><a href="">DXD SYNERGY Marketplace</a></p>
-                            <p><a href="">Gift vouchers</a></p>
-                            <p><a href="">Black Friday</a></p>
-                        </div>
-                    </div>
-
-                    <div class="d-md-flex bottom_of_footer">
-                        <div class="col-md-6">
-                            <p class="copyright">
-                                <i class="fa fa-copyright" aria-hidden="true"></i>
-                                2022 DXD SYNERGY
-                            </p>
-                        </div>
-
-                        <div class="col-md-6 cookies">
-                            <p class="mb-0"><a class="privacy_and_cookies" href="">Privacy & Cookies</a></p>
-                            <p class="mb-0"><a class="terms_and_condition" href="">Ts&Cs</a></p>
-                            <p class="mb-0"><a href="">Accessibility</a></p>
-                        </div>
-                    </div>
-                </footer>
-    </main>
-
-
-    <!-- <script>
-
-
-
-        $(document).ready(function () {
-            $("#myCarousel").carousel({
-                interval: false
-            });
-            $("#myCarousel2").carousel({
-                interval: false
-            });
-            $("#myCarousel3").carousel({
-                interval: false
-            });
-            $("#myCarousel4").carousel({
-                interval: false
-            });
-            $("#myCarousel5").carousel({
-                interval: false
-            });
-            $("#myCarousel6").carousel({
-                interval: false
-            });
-            $("#myCarousel7").carousel({
-                interval: false
-            });
-            $("#myCarousel8").carousel({
-                interval: false
-            });
-            $("#myCarousel9").carousel({
-                interval: false
-            });
-            $("#myCarousel10").carousel({
-                interval: false
-            });
-            $("#myCarousel11").carousel({
-                interval: false
-            });
-            $("#myCarousel12").carousel({
-                interval: false
-            });
-            $("#myCarousel13").carousel({
-                interval: false
-            });
-            $("#myCarousel14").carousel({
-                interval: false
-            });
-            $("#myCarousel15").carousel({
-                interval: false
-            });
-        });
-
-    </script> -->
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <!-- JAVASCRIPT LINK -->
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/shopping.js' %}"></script>
-    <!-- <script async src="//jsfiddle.net/wyEq7/embed/"></script> -->
-
-</body>
-
-</html>
+{% endblock %}

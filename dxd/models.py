@@ -15,6 +15,14 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('dxd:products_list_by_category', args=[self.slug])
+SIZE = (
+    ('xs', 'XS'),
+    ('s', 'S'),
+    ('m', 'M'),
+    ('l', 'L'),
+    ('xl', 'XL'),
+    ('xxl', 'XXL'),
+)
 
 class Product(models.Model):
     """Creates a database instance Item in database."""
@@ -26,6 +34,7 @@ class Product(models.Model):
     photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    size = models.CharField(choices=SIZE, default= "m", max_length=3)
     color = models.CharField(max_length=50, default="Blue")
     category = models.ForeignKey(Category, related_name="products", on_delete=models.CASCADE)
     description = models.TextField()
@@ -36,4 +45,4 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('dxd:product', args=[self.id, self.slug])
+        return reverse('dxd:product', args=[self.slug])

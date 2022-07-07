@@ -7,6 +7,7 @@
 img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .carousel_overall{
@@ -290,6 +291,15 @@ small {
     border: 2px solid black;
 }
 
+.might_like_details > div >h6,
+.might_like_details > div >p {
+    font-size: 9px;
+}
+
+.product_name {
+    font-size: 13px;
+}
+
 /* custom select button  ends here*/
 
 
@@ -322,7 +332,7 @@ small {
         border: none;
         margin-top: 10px;
         margin-bottom: 10px;
-        padding: 5px 20px;
+        padding: 5px 10px;
         color: white;
         font-weight: 700;
         width: 90%;
@@ -403,11 +413,16 @@ small {
     small {
       font-size: 9px;
     }
+
+    .add_to_bag{
+        padding: 5px 10px;
+        width: 100%;
+    }
 }
 
 
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     .might_like_sub-container {
         display: grid;
         justify-content: unset;

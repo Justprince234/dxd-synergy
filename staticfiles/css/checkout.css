@@ -314,7 +314,7 @@ input[type=checkbox]{
 
 /* ***************** */
 .myBag_image{
-    height: 100px;
+    height: 70px;
     /* width: 150px; */
 }
 
@@ -436,8 +436,19 @@ div ul li {
 
     .description_content{
         height: fit-content;
-        position:static;
+        position:absolute;
         margin-bottom: 10px;
+        top: 0;
     }
+
+    .delivery_content{
+        position: absolute;
+        top: 38rem;
+    }
+
+    /* .footer {
+        position: absolute;
+        top: 50rem;
+    } */
 }
 

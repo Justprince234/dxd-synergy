@@ -12,13 +12,13 @@ admin.site.index_title = 'DXD SYNERGY ADMIN'
 
 class CategoryAdmin(admin.ModelAdmin):
 
-    list_display = ('name',)
+    list_display = ('id', 'name',)
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     search_fields = ('name',)
     list_per_page = 25
 
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
 
 class ProductAdmin(admin.ModelAdmin):
 
