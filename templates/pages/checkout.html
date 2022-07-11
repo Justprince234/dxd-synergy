@@ -30,8 +30,6 @@
           <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
         </a>
       </div>
-{% for item in cart %}
-  {% if item %}
       <div class="checkout">
         <h3>Order Confirmation Page</h3>
       </div>
@@ -42,62 +40,70 @@
       <div class="col-md-6 col-lg-6 delivery_content">
        
         <div>
-          <form class="bg-white px-5 py-4">
+          <form class="bg-white px-5 py-4" action="{% url 'orders:order_create' %}" method="POST">
+            {% csrf_token %}
             <div class="sign_up_with mb-4">
-              <h4 class="mb-3">DELIVERY ADDRESS</h4>
+              <h4 class="mb-3">DELIVERY INFORMATION</h4>
             </div>
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">FIRST NAME:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="first_name" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
             </div>
   
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">LAST NAME:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="last_name" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
             </div>
   
             <div class="form-group mb-3">
-              <label for="exampleInputEmail1" class="font-weight-bold d-md-flex text-muted">MOBILE<small id="emailHelp"
+              <label for="exampleInputEmail1" class="font-weight-bold d-md-flex text-muted">MOBILE:<small id="emailHelp"
                   class="form-text text-muted pl-md-3">(For delivery
                   updates ):</small> </label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="number" name="phone" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">E-MAIL:</label>
+              <input type="email" name="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
             </div>
   
             <div class="form-group mb-3">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">ADDRESS:</label>
-              <input type="text" class="form-control w-md-75 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <input type="text" name="address" class="form-control w-md-75 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
               <input type="text" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="Optional">
             </div>
   
             <div class="form-group mb-3">
-              <label for="exampleInputEmail1" class="font-weight-bold text-muted">CITY:</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">STATE:</label>
+              <input type="text" name="state" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold text-muted">POSTCODE:</label>
+              <input type="number" name="postal_code" class="form-control w-md-50" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
             </div>
   
             <div class="form-group">
               <label for="exampleInputEmail1" class="font-weight-bold text-muted">COUNTRY</label>
-              <input type="email" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Optional">
+              <input type="text" name="country" class="form-control w-md-75" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="" required>
             </div>
-  
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="font-weight-bold text-muted">POSTCODE:</label>
-              <input type="email" class="form-control w-md-50" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="">
-            </div>
+
   
             <div class="mb-4 pt-3">
              
   
   
               <div class="form-group pt-3">
-                <button class="start_shopping_button"><a href="">PLACE ORDER</a></button>
+                <button class="start_shopping_button" type="submit"><a>PLACE ORDER</a></button>
   
               </div>
   
@@ -141,6 +147,7 @@
           <h5>MY CART</h5>
           <p>Please confirm your items in cart!</p>
         </div>
+        {% for item in cart %}
         {% with product=item.product %}
         <div class="mb-2 bg-white pl-2 pr-0">
           <div class="d-flex justify-content-between">
@@ -168,6 +175,7 @@
 <hr>
              
               {% endwith %}
+              {% endfor %}
               
             </div>
           </div>
@@ -181,19 +189,7 @@
 
       </div>
 
-
-     
-  
-      
-     
-
-
-
     </section>
-    {% else%}
-      <h5>Empty Cart</h5>
-  {% endif %}
-{% endfor %}
    
 
   </main>

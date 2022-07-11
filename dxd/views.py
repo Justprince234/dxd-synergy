@@ -3,8 +3,6 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import ListView
 from django.http import Http404
 from django.db.models import Q
-from django.db.models.functions import Lower
-from django.contrib import messages
 
 
 from .models import Category, Product
@@ -17,6 +15,11 @@ def home(request):
     template_name = 'pages/index.html'
     context = {'categories': Category.objects.all()}
     return render(request, template_name, context)
+
+def about_us(request):
+    "Renders the about us page."
+    template_name = 'pages/about.html'
+    return render(request, template_name)
 
 def product(request, slug):
     """ A view to show individual product details """

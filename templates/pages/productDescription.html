@@ -104,7 +104,7 @@
                                     <!-- Wrapper for carousel items -->
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="image1" src="{{ product.photo_main.url}}" alt="First Slide">
+                                            <a href="{{product.get_absolute_url}}"><img class="image1" src="{{ product.photo_main.url}}" alt="First Slide"></a>
                                         </div>
 
                                         <!-- <div class="carousel-item bg-dark">
@@ -131,10 +131,6 @@
                                         <a class="text-decoration-none" href="{{product.get_absolute_url}}"><h6 class="font-weight-bold product_name">{{product.name}}</h6></a>
                                         <p class=" font-weight-bold pb-0">N {{product.price}}</p>
                                     </div>
-                                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                                        {% csrf_token %}
-                                        <button type="submit" class="add_to_bag hello" value="{{product.id}}" id="add-button" ><a >Add to Cart</a></button>
-                                    </form>
                                 </div>
                             </li>
                             {% endfor %}

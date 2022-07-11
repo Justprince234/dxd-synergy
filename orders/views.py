@@ -6,6 +6,7 @@ from cart.cart import Cart
 def order_create(request):
     cart = Cart(request)
     if request.method == 'POST':
+        carttotal = cart.get_total_price()
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         phone = request.POST['phone']
@@ -25,5 +26,5 @@ def order_create(request):
         # set the order in the session
         request.session['order_id'] = order.id
         # redirect for payment
-        return redirect('payments:process')
-    return render(request, 'pages/checkout.html')
+        return redirect('cart:cart_summary')
+    return render(request, 'pages/checkout.html', {'carttotal': carttotal})

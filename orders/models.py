@@ -8,6 +8,7 @@ from dxd.models import Product
 
 # Create your models here.
 class Order(models.Model):
+    order_number = models.CharField(max_length=32, unique=True, null=False, editable=False)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
@@ -15,7 +16,7 @@ class Order(models.Model):
     address = models.CharField(max_length=150)
     state = models.CharField(max_length=100)
     postal_code = models.CharField(max_length=20)
-    country = CountryField(multiple=False, blank_label='(select country)', default="NG")
+    country = CountryField(multiple=False, blank_label='(select country)', default="NIG")
     created = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
@@ -82,4 +83,4 @@ class OrderItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        return f'Owned by {self.order.first_name}, Order number: {self.order.order_number}'

@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.about_us_image {
+    background-image: url("topman_image.e3fcd088e956.jpg");
+    height: 30rem;
+    padding-top: 10rem;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.containers {
+    /* max-width: 90%; */
+    margin: auto;
+    padding-left: 15px ;
+    padding-right: 15px;
+}
+
+.logo {
+    height: 25rem;
+    width: 25rem;
+    
+}
+
+
+.facebook_icon1 {
+    font-size: 15px;
+    padding: 6px;
+    /* margin: 0px 20px; */
+    color: white;
+    border-radius: 50%;
+    /* background-color: rgb(60, 90, 153); */
+}
+
+.instagram_icon1 {
+    font-size: 15px;
+    padding: 6px;
+    margin: 0px 20px;
+    color: white;
+    border-radius: 50%;
+    /* background-color: purple; */
+}
+
+.snapchat_icon1 {
+    font-size: 15px;
+    padding: 6px;
+    /* margin: 0px 20px; */
+    color: white;
+    /* background-color: rgb(255, 252, 2); */
+    border-radius: 50%;
+}
+
+
+@media (max-width: 425px) {
+    .logo {
+        height: unset;
+        width: 80%;
+        margin: auto;
+    }
+}

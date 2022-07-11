@@ -7,7 +7,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,6 +18,7 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <!-- <link rel="stylesheet" href="/css/myOrders.css"> -->
     <link rel="shortcut icon" href="{% static 'images/DXD_synergy_logo.jpg' %}" type="image/x-icon">
 
@@ -50,10 +50,11 @@
         <nav class="main_navbar">
             <ul class="navbars">
                 <div class="navbrand_logo">
-                    <a class="fashion_category active" data-rel="#content-d" >
+                    <a class="fashion_category active" data-rel="#content-d" href="/" >
                         <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
                     </a>
                 </div>
+
                 <a href="{% url 'dxd:home' %}"><h6>Home</h6></a>
                 
                 <li class="women_section dropdowns">
@@ -73,8 +74,7 @@
                            <h6><a href="">Best Sellers</a></h6>
                            <h6><a href="">Summer</a></h6>
                            <h6><a href="">Travels</a></h6>
-                           <h6><a href="">Gifts</a></h6>
-                              
+                           <h6><a href="">Gifts</a></h6>         
                             </div>
                             <div class="columns">
                                 <h5><a href="" class="">Clothing</a></h5>
@@ -125,9 +125,6 @@
                             <h6><a href="">Summer</a></h6>
                             <h6><a href="">Travels</a></h6>
                             <h6><a href="">Gifts</a></h6>
-                            
-                              
-                              
                             </div>
                             <div class="columns">
                                 <h5><a href="" class="">Clothing</a></h5>
@@ -185,15 +182,11 @@
             </ul>
 
         </nav>
-
-
-        <!-- *****************SIDEBAR SECTION************************ -->
             <!-- ************************************************************* -->
             <!-- ************************************************************* -->
             <!-- *****************SIDEBAR SECTION MODIFY STARTS************************ -->
             <!-- ************************************************************* -->
             <!-- ************************************************************* -->
-
             <div class="sidebar" id="home">
                 <input type="checkbox" id="click">
                 <label for="click" class="togglebar">
@@ -218,7 +211,7 @@
                         
                         <div class="container sub_columns  px-0 mt-2 pb-2 position-absolute d-block overflow-x-hidden  overflow-y-scroll" id="content-a">
                             <li class="side-bar-columns py-1 mt-2">
-                                <a class="text-dark font-weight-bold" href="/index.html">HOME</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:home' %}">HOME</a>
                             </li>
                            
                             <li class="sales_discount">
@@ -231,17 +224,7 @@
     
                                 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
                                     <button onclick="w1_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Clothing</button>
-                               
-                                    <a href="{{categories.0.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.0.name}}</a>
-                                    <a href="{{categories.1.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.1.name}}</a>
-                                    <a href="{{categories.2.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.2.name}}</a>
-                                    <a href="{{categories.3.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.3.name}}</a>
-                                    <a href="{{categories.4.get_absolute_url}}">{{categories.4.name}}</a>
-                                    <a href="{{categories.5.get_absolute_url}}">{{categories.5.name}}</a>
-                                    <a href="{{categories.6.get_absolute_url}}">{{categories.6.name}}</a>
-                                    <a href="{{categories.7.get_absolute_url}}">{{categories.7.name}}</a>
-                                    <a href="{{categories.8.get_absolute_url}}">{{categories.8.name}}</a>
-                                    <a href="{{categories.9.get_absolute_url}}">{{categories.9.name}}</a>
+                                    <a href="#" class="w3-bar-item w3-button text-dark">item1</a>
                                   </div>
                                   
                                   <div class="d-flex justify-content-between align-items-center px-2">
@@ -382,90 +365,345 @@
                 </ul>
     
             </div>
-    
-              <!-- ************************************************************* -->
-                <!-- ************************************************************* -->
-                <!-- *****************SIDEBAR SECTION MODIFY Ends************ -->
-                <!-- ************************************************************* -->
-                <!-- ************************************************************* -->
-        {% block content %}
-        {% endblock %}
-        <footer>
-            <div class="icons_and_images">
-                <ul class="font_awesome_icons">
-                    <a href="https://www.facebook.com/dxdsynergy/"><i class="fa fa-facebook-official facebook_icon" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/dxd_synergy_?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram instagram_icon" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/dxd_synergy_?s=11&t=w9CXZKFEdoyQqjaVjFaPWw"><i class="fa fa-twitter twitter_icon" aria-hidden="true"></i></a>
-                </ul>
+        <!-- ************************************************************* -->
+        <!-- ************************************************************* -->
+        <!-- *****************SIDEBAR SECTION MODIFY STARTS************************ -->
+        <!-- ************************************************************* -->
+        <!-- ************************************************************* -->
 
-                <ul class="electronic_images">
-                    <li class="visa_image"><img src="https://images.asos-media.com/navigation/visa-png" alt=""></li>
-                    <li class="mastercard_image"><img src="https://images.asos-media.com/navigation/mastercard-png"
-                            alt="">
+        <div class="sidebar" id="home">
+            <input type="checkbox" id="click">
+            <label for="click" class="togglebar">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+
+            <ul>
+                <div class="toggle_button_container">
+                    <li class="li_women ">
+                        <button class="button active" data-rel="#content-a" href="/sub_category/women.html">WOMEN
+                        </button>
                     </li>
-                    <li class="pay-pal_image"><img src="https://images.asos-media.com/navigation/pay-pal-png"
-                            alt=""></li>
-                    <li class="american-express_image"><img
-                            src="https://images.asos-media.com/navigation/american-express-png" alt=""></li>
-                    <li class="visa-electron_image"><img
-                            src="https://images.asos-media.com/navigation/visa-electron-png" alt=""></li>
-                </ul>
+                    <li class="li_men">
+                        <button class="button" data-rel="#content-b" href="/sub_category/men.html">MEN</button>
+                    </li>
+
+                </div>
+
+                <div class="px-3 position-relative side-bar_columns">
+
+                    <div class="container sub_columns  px-0 mt-2 pb-2 position-absolute d-block overflow-x-hidden  overflow-y-scroll"
+                        id="content-a">
+                        <li class="side-bar-columns py-1 mt-2">
+                            <a class="text-dark font-weight-bold" href="/index.html">HOME</a>
+                        </li>
+
+                        <li class="sales_discount">
+                            <p class="pt-4 pl-3">
+                                SALE UP TO 70% <br> OFF
+                            </p>
+                        </li>
+
+                        <li class="bg-light py-1  mt-2">
+
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+                                <button onclick="w1_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1"
+                                        aria-hidden="true"></i>Clothing</button>
+                                <a href="#" class="w3-bar-item w3-button text-dark">item1</a>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w1_open()">Clothing </button>
+                                <i onclick="w1_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+
+                            </div>
+                        </li>
+
+                        <li class="bg-light py-1 mt-2">
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar2">
+                                <button onclick="w2_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Shoe</button>
+                                <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
+                                <a href="#" class="w3-bar-item w3-button">item2</a>
+                                <a href="#" class="w3-bar-item w3-button">item3</a>
+                            </div>
+
+                            <!-- Page Content -->
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w2_open()">Shoes</button>
+                                <i onclick="w2_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                                <!-- <div class="w3-container">
+                                  <h1>My Page</h1>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="bg-light py-1 mt-2">
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar3">
+                                <button onclick="w3_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1"
+                                        aria-hidden="true"></i>Acessories</button>
+                                <a href="#" class="w3-bar-item w3-button text-dark">item1</a>
+                                <a href="#" class="w3-bar-item w3-button">item2</a>
+                                <a href="#" class="w3-bar-item w3-button">item3</a>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w3_open()">Accessories</button>
+                                <i onclick="w3_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+
+                            </div>
+                        </li>
+
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">New Arrivals</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Best Sellers</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Summers</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Travels</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Gifts</a>
+                        </li>
+                    </div>
+
+                    <div class="container sub_columns  px-0 mt-2 pb-2 position-absolute d-block overflow-x-hidden  overflow-y-scroll"
+                        id="content-b">
+                        <li class="side-bar-columns py-1 mt-2">
+                            <a class="text-dark font-weight-bold" href="/index.html">HOME</a>
+                        </li>
+
+                        <li class="sales_discount">
+                            <p class="pt-4 pl-3">
+                                SALE UP TO 70% <br> OFF
+                            </p>
+                        </li>
+
+                        <li class="bg-light py-1  mt-2">
+
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar4">
+                                <button onclick="w4_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1"
+                                        aria-hidden="true"></i>Clothing</button>
+                                <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
+                                <a href="#" class="w3-bar-item w3-button">item2</a>
+                                <a href="#" class="w3-bar-item w3-button">item3</a>
+                            </div>
+
+                            <!-- Page Content -->
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w4_open()">Clothing </button>
+                                <i onclick="w4_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                                <!-- <div class="w3-container">
+                                  <h1>My Page</h1>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="bg-light py-1 mt-2">
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar5">
+                                <button onclick="w5_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Shoes</button>
+                                <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
+                                <a href="#" class="w3-bar-item w3-button">item2</a>
+                                <a href="#" class="w3-bar-item w3-button">item3</a>
+                            </div>
+
+                            <!-- Page Content -->
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w5_open()">Shoes</button>
+                                <i onclick="w5_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                                <!-- <div class="w3-container">
+                                  <h1>My Page</h1>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="bg-light py-1 mt-2">
+                            <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar6">
+                                <button onclick="w6_close()"
+                                    class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i
+                                        class="fa fa-angle-left fa-2x pr-2 mb-1"
+                                        aria-hidden="true"></i>Accessories</button>
+                                <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
+                                <a href="#" class="w3-bar-item w3-button">item2</a>
+                                <a href="#" class="w3-bar-item w3-button">item3</a>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center px-2">
+                                <button class="w3-button font-weight-bold" onclick="w6_open()">Accessories</button>
+                                <i onclick="w6_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+
+                            </div>
+                        </li>
+
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">New Arrivals</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Best Sellers</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Summers</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Travels</a>
+                        </li>
+                        <li class="bg-light py-1 mt-2 side-bar-columns">
+                            <a class="text-dark font-weight-bold" href="/index.html">Gifts</a>
+                        </li>
+                    </div>
+                </div>
+
+            </ul>
+
+        </div>
+
+        <!-- ************************************************************* -->
+        <!-- ************************************************************* -->
+        <!-- *****************SIDEBAR SECTION MODIFY Ends************ -->
+        <!-- ************************************************************* -->
+        <!-- ************************************************************* -->
+
+        <!--********************** HERO SECTION  STARTs *************************** -->
+
+        <div id="content-d" class="category">
+
+            <section>
+
+                <div class="about_us_image  ">
+                    <div class="d-flex justify-content-center align-items-center text-white">
+                        <h1>DXD SYNERGY</h1>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary"><a href="#contact_us" class="text-decoration-none text-white">Contact Us</a></button>
+                    </div>
+                </div>
+
+                <div class="containers py-5">
+                    <div class="row justify-content-around">
+                        <div class="col-md-5">
+                            <h3 class="font-weight-bold">ABOUT US</h3>
+                            <h5 class="font-weight-bold text-start">For Customers Satisfaction!</h5>
+                            <p class="text-justify">DXD SYNERGY mission statement is "to continuously produce top notch quality Clothing, 
+                                Shoes and accessories for our ever loving customers. We are committed to continuously improving our products and brands to meet
+                                customers satisfaction."
+                            </p>
+                        </div>
+
+                        <div class="col-m-6">
+                            <div class=" logo">
+                                <img src="{% static 'images/IMG-20220709-WA0001.jpg' %}" alt="">
+                            </div>
+                            <div class="logo">
+                                <h6>Oben, Joseph Tchamabeu </h6>
+                                <h6>Chairman/Founder, DXD SYNERGY</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="containers mt-5 bg-light py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <h3 class="font-weight-bold border-bottom border-bottom-5">Our Vision</h3>
+                            <p class="mt-4">DXD SYNERGY vision statement is "to be able to express it's essense in design and manufacturing
+                                globally. </p>
+
+                        </div>
+
+                        <div class="col-md-5 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h3 class="font-weight-bold text-right border-bottom border-bottom-5">Our Mission</h3>
+                            <p class="text-right">Our Mission at DXD SYNERGY has always been to represent beauty and class
+                                in fashion globally.
+                            </p>
+                            <p class="text-right">Originality and Authenticity in products and design never to be compromised. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <footer class="bg-dark">
+            <div class="containers pb-4 pt-5" id="contact_us">
+                <h1 class="text-white font-weight-bold text-center">CONTACT US</h1>
+                <p class="text-white text-center">Send us comments...</p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <form class="text-white w-100" action="https://sheetdb.io/api/v1/eqlztmdpn96z4" method="POST", id="sheetdb-form">
+                            <input type="hidden" id="contact-us" name="contact-us">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="first-name">Firstname:</label>
+                                    <input type="text" class="form-control" id="first-name" name="data[first-name]" placeholder="Firstname" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last-name">Lastname:</label>
+                                    <input type="text" class="form-control" id="last-name" name="data[last-name]" placeholder="Lastname" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="e-mail">Email:</label>
+                                    <input type="email" class="form-control" id="e-mail" name="data[e-mail]" placeholder="examle@domain.com" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="data[address]"
+                                        placeholder="Optional">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">How can we help?</label>
+                                <textarea class="form-control" id="message" name="data[message]" rows="3" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-3 text-white">
+                        <h3>Address</h3>
+                        <p>43c 4th Avenue 403 Road Festac Town, <br>Lagos State <br> Nigeria.</p>
+
+                        <h5>Phone</h5>
+                        <p>(+234) 703 442 9448</p>
+
+                        <h5>E-mail</h5>
+                        <p>contact@dxd-synergy.com</p>
+        
+                        <div class="">
+                            <ul class="font_awesome_icons">
+                                <a href="https://www.facebook.com/dxdsynergy/"><i class="fa fa-facebook-official facebook_icon1 text-white" aria-hidden="true"></i></a>
+                                <a href="https://instagram.com/dxd_synergy_?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram instagram_icon1" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/dxd_synergy_?s=11&t=w9CXZKFEdoyQqjaVjFaPWw"><i class="fa fa-twitter twitter_icon1" aria-hidden="true"></i></a>
+                            </ul>
+                        </div>
+        
+                    </div>
+                </div>
+
             </div>
 
-            <div class="d-md-flex footer_information">
-                <div class="col-md-4">
-                    <h6>HELP & INFORMATION</h6>
-                    <p><a href="">Help</a></p>
-                    <p><a href="">Track order</a></p>
-                    <p><a href="">Delivery & returns</a></p>
-                </div>
-
-                <div class="col-md-4">
-                    <h6>ABOUT DXD SYNERGY</h6>
-                    <p><a href="{% url 'dxd:about-us' %}">About us</a></p>
-                    <p><a href="">Careers at DXD SYNERGY</a></p>
-                    <p><a href="">Corporate responsiblity</a></p>
-                    <p><a href="">Investors' site</a></p>
-                </div>
-
-                <div class="col-md-4">
-                    <h6>MORE FROM DXD SYNERGY</h6>
-                    <p><a href="">Mobile and DXD SYNERGY apps</a></p>
-                    <p><a href="">DXD SYNERGY Marketplace</a></p>
-                    <p><a href="">Gift vouchers</a></p>
-                    <p><a href="">Black Friday</a></p>
-                </div>
-
-            </div>
-
-            <div class="d-md-flex bottom_of_footer">
-                <div class="col-md-6">
-                    <p class="copyright">
-                        <i class="fa fa-copyright" aria-hidden="true"></i>
-                        2022 DXD SYNERGY
-                    </p>
-                </div>
-
-                <div class="col-md-6 cookies">
-                    <p class="mb-0"><a class="privacy_and_cookies" href="">Privacy & Cookies</a></p>
-                    <p class="mb-0"><a class="terms_and_condition" href="">Ts&Cs</a></p>
-                    <p class="mb-0"><a href="{% url 'dxd:about-us' %}">About us</a></p>
-                </div>
-            </div>
+          <div class="text-white text-center border-top border-light py-2"><i class="fa fa-copyright" aria-hidden="true"></i>DXD SYNERGY</div>
         </footer>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
