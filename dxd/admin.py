@@ -3,7 +3,8 @@ from django.contrib import admin
 # Register your models here.
 from .models import (
     Category,
-    Product
+    Product,
+    Career
 )
 
 admin.site.site_header = 'DXD SYNERGY'
@@ -29,3 +30,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_per_page = 25
 
 admin.site.register(Product, ProductAdmin)
+
+class CareerAdmin(admin.ModelAdmin):
+    list_display = ('title', 'available')
+
+admin.site.register(Career, CareerAdmin)

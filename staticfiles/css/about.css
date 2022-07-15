@@ -11,7 +11,7 @@ img {
 }
 
 .about_us_image {
-    background-image: url(topman_image.jpg);
+    background-image: url(/images/topman_image.jpg);
     height: 30rem;
     padding-top: 10rem;
 

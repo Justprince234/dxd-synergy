@@ -26,5 +26,5 @@ def order_create(request):
         # set the order in the session
         request.session['order_id'] = order.id
         # redirect for payment
-        return redirect('cart:cart_summary')
+        return redirect('payment:process')
     return render(request, 'pages/checkout.html', {'carttotal': carttotal})

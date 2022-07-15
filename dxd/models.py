@@ -46,3 +46,11 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('dxd:product', args=[self.slug])
+
+class Career(models.Model):
+    title = models.CharField(max_length=150)
+    description = models.TextField(null=True, blank=True)
+    available = models.BooleanField(default=True)
+    
+    def __str__(self):
+        return self.title

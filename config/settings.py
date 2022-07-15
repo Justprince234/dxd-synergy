@@ -18,6 +18,12 @@ import dj_database_url
 import cloudinary
 import cloudinary_storage
 
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l!1r+@=&3*)w(e_5_aa85ac17i+xfp$d0s(52&zt3j5lo(wzm&'
+SECRET_KEY = env("DJANGO_SECRET_KEY", default="unsafe-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -107,6 +113,9 @@ CLOUDINARY_STORAGE = {
     'API_KEY': "696384244972455",
     'API_SECRET': "Hpwshp2IXqcCW5S87YScyOU8u6w",
 }
+
+PAYSTACK_SECRET_KEY = 'sk_test_b9c07e7efe4f6fb28a49bb3c1e38a1cc6b80ea40'
+PAYSTACK_PUBLIC_KEY = 'pk_test_5817abcfda69679206cf9df66e65c30a47f3878c'
 
 
 # Password validation

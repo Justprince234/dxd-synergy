@@ -22,7 +22,6 @@ class Order(models.Model):
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    braintree_id = models.CharField(max_length=150, blank=True)
 
     class Meta:
         ordering = ('-created',)
@@ -69,18 +68,13 @@ class OrderItem(models.Model):
     product = models.ForeignKey(Product, related_name='order_items', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, default=0,null=False, blank=False, editable=False)
 
     def __str__(self):
         return str(self.id)
     
-    def save(self, *args, **kwargs):
-        """
-        Override the original save method to set the lineitem total
-        and update the order total.
-        """
-        self.lineitem_total = self.product.price * self.quantity
-        super().save(*args, **kwargs)
 
+    def get_cost(self):
+        return self.price * self.quantity
+        
     def __str__(self):
         return f'Owned by {self.order.first_name}, Order number: {self.order.order_number}'

@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.track_section>p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form {
+    width: 65%;
+}
+
+input {
+    height: 70px;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+button {
+    background-color: rgb(71, 185, 136);
+    right: 1.5rem;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+}
+
+@media (max-width:768px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .track_section>p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}

@@ -43,6 +43,22 @@ img {
     margin: 0 17px;
 }
 
+/* .search:focus {
+    background-color: #e8e8e8;
+}
+
+.not-visible {
+    display: none;
+}
+
+.results-card {
+    width: 50%;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.25);
+    transition: 0.5s;
+    border-radius: 7px;
+    padding: 15px 15px;
+} */
+
 
 
 /******* MAIN NAVBAR **************/
@@ -154,9 +170,6 @@ img {
 
 }
   
-
-
-
   /* Clear floats after the columns */
   .rows:after {
     content: "";
@@ -288,6 +301,7 @@ form {
 
 .checkout_suitcase {
     font-size: 21px;
+    /* margin-left: 3rem; */
     /* width: 50px; */
     /* height: 30px; */
 }
@@ -366,7 +380,6 @@ form {
 /* ********NEW CHANGES ADDED ENDS**********/
 /* *************************************** */
 /* *************************************** */
-
 
 .sidebar {
     height: 80px;
@@ -1155,17 +1168,6 @@ footer .visa_image,
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /**************** MEDIA QUERIES ***************************/
 
 @media (max-width:1024px) {
@@ -1232,19 +1234,4 @@ footer .visa_image,
         width: 100%;
     }
 
-    /* input[type=text] {
-        width: 130px;
-        height: 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 50px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url('searchicon.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        transition: width 0.4s ease-in-out;
-      }
-       */
 }

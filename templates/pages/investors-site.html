@@ -1,0 +1,100 @@
+{% extends "pages/base.html"%}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="/css/about.css">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+        <div id="content-d" class="category">
+
+            <section>
+
+                <div class="about_us_image  ">
+                    <div class="d-flex justify-content-center align-items-center text-white">
+                        <h1>Welcome to DXD SYNERGY</h1>
+                    </div>
+                    <p class="text-white col-md-6 text-center m-auto">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Repellat ipsum accusantium at asperiores provident possimus</p><br>
+                    <div class="text-center">
+                        <button class="btn btn-primary"><a href="#contact_us"
+                                class="text-decoration-none text-white">Contact Us</a></button>
+                    </div>
+                </div>
+
+                <div class="containers px-5 py-5">
+                    <hr style="background-color: skyblue; height: 3px;">
+                    <div class="text-center text-dark">
+                        <h3 class="font-weight-bold">INVESTORS & FINANCIALS</h3>
+                        <!-- <p class="col-md-6 m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia repellat accusamus unde expedita harum recusandae esse ea tempora rerum</p> -->
+                    </div><br>
+                    <div class="row justify-content-center">
+
+                        <div class="col-m-6 mt-3">
+                            <div class="h-100">
+                                <h4 class="font-weight-bold">Latest reports & presentations</h4>
+                                <hr class="font-weight-bold">
+
+                                <div>
+                                    <h6 class="font-weight-bold">16/06/2022</h6>
+                                    <p class="font-weight-bold">Trading Statement for the three months ended 31 May 2022
+                                    </p>
+                                    <i class="fa fa-clipboard text-primary" aria-hidden="true"></i>
+                                    <i class="fa fa-file-audio-o text-primary pl-2" aria-hidden="true"></i>
+                                </div><br>
+
+                                <div>
+                                    <h6 class="font-weight-bold">12/04/2022</h6>
+                                    <p class="font-weight-bold">Trading Statement for the three months ended 31 May 2022
+                                    </p>
+                                    <i class="fa fa-clipboard text-primary" aria-hidden="true"></i>
+                                    <i class="fa fa-file-audio-o text-primary pl-2" aria-hidden="true"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-white mt-3 ">
+                            <div class="pl-md-4 h-100">
+                                <h4 class="text-dark font-weight-bold">Annual Report 2021</h4>
+                                <hr>
+                                <div class="d-flex">
+                                    <div>
+                                        <div class="report-image" style="width: 170px; height:150px">
+                                            <img src="{% static 'images/IMG-20220709-WA0001.jpg' %}" alt="">
+    
+                                        </div>
+                                        <div style="height: 3rem; object-fit: cover;">
+                                            <img src="{% static 'images/DXD.jpg' %}" alt="">
+                                        </div>
+    
+                                    </div>
+                                    <div class="text-dark ml-3">
+                                        <h5 class="font-weight-bold">28/10/2021</h5>
+                                        <h6 class="font-weight-bold">Annual Report & Accounts</h6>
+                                        <a href="#" class="font-weight-bold text-decoration-none">Read PDF <i
+                                                class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <hr style="background-color: skyblue; height: 3px;">
+                </div>
+
+
+
+
+            </section>
+
+        </div>
+{% endblock %}
