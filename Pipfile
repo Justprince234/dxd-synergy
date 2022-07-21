@@ -16,6 +16,8 @@ django-countries = "*"
 django-crispy-forms = "*"
 django-heroku = "*"
 django-environ = "*"
+django-weasyprint = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

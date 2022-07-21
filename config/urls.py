@@ -23,7 +23,8 @@ urlpatterns = [
     path('', include('dxd.urls', namespace='dxd')),
     path('order/', include('orders.urls', namespace='orders')),
     path('cart/', include('cart.urls', namespace='cart')),
-    path('payment/', include('payments.urls', namespace='payment'))
+    path('payment/', include('payments.urls', namespace='payment')),
+    path('coupons/', include('coupons.urls', namespace='coupons'))
 ]
 
 if settings.DEBUG: 

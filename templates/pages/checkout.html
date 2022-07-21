@@ -24,6 +24,8 @@
 
 <body>
   <main>
+    {% with total_items=cart|length %}
+    {% if total_items > 0 %}
     <nav>
       <div class="synergy_logo">
         <a href="{% url 'dxd:home' %}">
@@ -34,6 +36,7 @@
         <h3>Order Confirmation Page</h3>
       </div>
     </nav>
+    
     <section class="row section justify-content-center">
 
       <div class="col-md-6 col-lg-6 delivery_content">
@@ -155,7 +158,7 @@
                 <a href="{{product.get_absolute_url}}"><div class="myBag_image"><img src="{{ product.photo_main.url }}" alt=""></div></a>
                 <div class="w-100">
                   <h5><a href="{{product.get_absolute_url}}">{{ product.name }}</a></h5>
-                  <h5>N {{ product.price }}</h5>
+                  <h5>N {{ product.price|floatformat:2 }}</h5>
                   <div class="d-flex justify-content-between mt-2">
                     <p class="pr-2"> Quantity: {{ item.quantity }}</p>
                     <p class="pr-2"> Colour: {{ product.color }}</p>
@@ -172,23 +175,59 @@
                 </form>
               </div>
 <hr>
-             
               {% endwith %}
               {% endfor %}
               
             </div>
           </div>
         </div>
+        {% if cart.coupon %}
+        <div class="d-flex justify-content-end sub_total mb-2 bg-white py-3 px-5">
+          <br>
+          <br>
+          "{{ cart.coupon.code }}" offers ({{ cart.coupon.discount }}% off)
+          <h5 class="pr-1">TOTAL</h5>
+          <h5>N{{ cart.get_total_price_after_discount|floatformat:2  }}</h5>
+        </div>
+        {% else %}
         <div class="d-flex justify-content-end sub_total mb-2 bg-white py-3 px-5">
           <h5 class="pr-1">TOTAL</h5>
-          <h5>N{{ cart.get_total_price }}</h5>
-
+          <h5>N{{ cart.get_total_price|floatformat:2 }}</h5>
         </div>
-
+        {% endif %}
+        <p>Apply a coupon:</p>
+      <form action="{% url 'coupons:apply' %}" method="post">
+      {{ coupon_apply_form }}
+      <input type="submit" value="Apply">
+      {% csrf_token %}
+      </form>
 
       </div>
 
     </section>
+    {% else %}
+      <!-- <div class="container text-justify">
+        <div class="synergy_logo pb-5">
+          <a href="{% url 'dxd:home' %}">
+            <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
+          </a>
+        </div>
+        <div>
+          <h3>Cart is empty.</h3>
+          <p>You have not added any item to cart.</p>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="card text-center" style="position: absolute; width: 18rem; justify-content: center; margin: auto;">
+          <div class="card-body">
+            <h5 class="card-title">Empty Cart!</h5>
+            <p class="card-text">Please add item(s) into cart</p>
+            <a href="{% url 'dxd:home' %}" class="btn btn-primary">Continue shopping</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% endwith %}
    
 
   </main>

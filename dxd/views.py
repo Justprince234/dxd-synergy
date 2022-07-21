@@ -1,4 +1,3 @@
-from unicodedata import category
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import ListView
 from django.http import Http404
@@ -6,6 +5,7 @@ from django.db.models import Q
 
 
 from .models import Category, Product, Career
+from orders.models import Order
 from cart.forms import CartAddProductForm
 
 # Create your views here.
@@ -19,6 +19,10 @@ def home(request):
 def track_order(request):
     "Renders the order tracking page."
     template_name = 'pages/DXDtrack.html'
+    if 'q':
+        q = request.GET.get('q', False)
+        orders = Order.objects.filter(order_number__icontains=q)
+        return render(request,"pages/DXDtrack.html", {'orders': orders})
     return render(request, template_name)
 
 def corporate_responsibility(request):
@@ -44,6 +48,57 @@ def about_us(request):
     "Renders the about us page."
     template_name = 'pages/about.html'
     return render(request, template_name)
+
+def black_friday(request):
+    """ A view to show black friday items"""
+    black_fridays = Product.objects.filter(black_friday=True)
+    template_name = "pages/black-friday.html"
+    return render (request, template_name, {'black_fridays': black_fridays})
+
+def new_arrival(request):
+    """ Renders new arrival items"""
+    new_arrival = Product.objects.filter(new_arrival=True)
+    template_name = "pages/new-arrival.html"
+    return render (request, template_name, {'new_arrival': new_arrival})
+
+def best_sellers(request):
+    """ Renders best_sellers items"""
+    best_seller= Product.objects.filter(best_seller=True)
+    template_name = "pages/best_seller.html"
+    return render (request, template_name, {'best_seller': best_seller})
+
+def summer(request):
+    """ Renders summer items"""
+    summer= Product.objects.filter(summer=True)
+    template_name = "pages/best_seller.html"
+    return render (request, template_name, {'summer': summer})
+
+def travels(request):
+    """ Renders travels items"""
+    travels= Product.objects.filter(travels=True)
+    template_name = "pages/travels.html"
+    return render (request, template_name, {'travels': travels})
+
+def gifts(request):
+    """ Renders gifts items"""
+    gifts= Product.objects.filter(gift=True)
+    template_name = "pages/gifts.html"
+    return render (request, template_name, {'gifts': gifts})
+
+def terms_condition(request):
+    """ Renders terms and conditions"""
+    template_name = "pages/terms-condition.html"
+    return render (request, template_name)
+
+def delivery_returns(request):
+    "Renders delivery page"
+    template_name = 'pages/delivery.html'
+    return render(request, template_name)
+
+def search(request):
+    q = request.GET['q']
+    products = Product.objects.filter(name__icontains=q)
+    return render(request,'pages/search.html', {'products': products})
 
 def product(request, slug):
     """ A view to show individual product details """

@@ -23,7 +23,7 @@ admin.site.register(Category, CategoryAdmin)
 
 class ProductAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'category', 'price', 'discount_price', 'available', 'description')
+    list_display = ('name', 'category', 'price', 'discount_price', 'available', 'black_friday')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('name',)
     search_fields = ('name',)

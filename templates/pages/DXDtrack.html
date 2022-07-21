@@ -20,23 +20,42 @@
       
     <main class="bg-light pt-4 d-flex flex-column justify-content-between" style="height: 100vh;">
 
-        <nav class="d-flex justify-content-center ml-auto mr-auto" style="width: 8rem; height: 5rem;">
-          <a href="{% url 'dxd:home' %}">
-            <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
-          </a>  
-        </nav>
+      <nav class="d-flex justify-content-center ml-auto mr-auto" style="width: 8rem; height: 5rem;">
+        <a href="{% url 'dxd:home' %}">
+          <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
+        </a>
+    </nav>
 
         <div class="track_section">
             <p class="text-center">Track A Package</p>
-            <form action="" class="m-auto d-flex align-items-center position-relative pb-3">
-                <input type="text" class="shadow-sm py-4 bg-white form-control px-3 rounded-0 border-0" placeholder="Enter Order Number"> 
+            <form action="{% url 'dxd:track-order' %}" class="m-auto d-flex align-items-center position-relative pb-3">
+              {% csrf_token%}
+                <input type="search" name="q" class="shadow-sm py-4 bg-white form-control px-3 rounded-0 border-0" placeholder="Enter Order Number"> 
                 <button class="px-4 position-absolute text-white d-none d-lg-block rounded">TRACK</button>
                 <button class="d-flex  px-3 py-2 rounded position-absolute text-white d-lg-none d-block"><i class="fa fa-search" aria-hidden="true"></i></button>
             </form>
         </div>
-
+        {% for order in orders %}
+        <div class="container h-100">
+          <div class="row align-items-center h-100">
+              <div class="col-6 mx-auto">
+                  <div class="card h-100 border-primary justify-content-center">
+                      <div class="pl-3">
+                          <p class="mt-5">Information for Order Number: {{order.order_number}}<p>
+                          <br>
+                          <hr>
+                          <p>Name: {{order.first_name}} {{ order.last_name}}</p><br>
+                          <p>Address: {{order.address}}, {{order.state}}, {{order.country}}</p><br>
+                          <p>Order Status: {{order.status}}</p>
+                          <p>Items amount: {{}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        {% endfor %}
         <div class="text-center text-muted" style="font-size: 10px;">
-            <p class="mb-0">Help? Call <span class="font-weight-bold">0708 063 5700</span></p>
+            <p class="mb-0">Help? Call <span class="font-weight-bold">(+234) 703 442 9448</span></p>
             <p>Copyright © <span class="font-weight-bold">2022</span> DXD-Synergy. All rights reserved</p>
         </div>
 

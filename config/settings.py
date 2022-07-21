@@ -18,11 +18,8 @@ import dj_database_url
 import cloudinary
 import cloudinary_storage
 
-import environ
-
-# Initialise environment variables
-env = environ.Env()
-environ.Env.read_env()
+from dotenv import load_dotenv
+load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("DJANGO_SECRET_KEY", default="unsafe-secret-key")
+SECRET_KEY = str(os.getenv("DJANGO_SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -59,7 +56,8 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
     'payments.apps.PaymentsConfig',
-    'accounts.apps.AccountsConfig'
+    'accounts.apps.AccountsConfig',
+    'coupons.apps.CouponsConfig'
 ]
 
 MIDDLEWARE = [
@@ -109,13 +107,13 @@ DATABASES = {
 
 # Cloudinary stuff
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "intellicommunications",
-    'API_KEY': "696384244972455",
-    'API_SECRET': "Hpwshp2IXqcCW5S87YScyOU8u6w",
+    'CLOUD_NAME': str(os.getenv("CLOUD_NAME")),
+    'API_KEY': str(os.getenv("API_KEY")),
+    'API_SECRET': str(os.getenv("API_SECRET"))
 }
 
-PAYSTACK_SECRET_KEY = 'sk_test_b9c07e7efe4f6fb28a49bb3c1e38a1cc6b80ea40'
-PAYSTACK_PUBLIC_KEY = 'pk_test_5817abcfda69679206cf9df66e65c30a47f3878c'
+PAYSTACK_SECRET_KEY = str(os.getenv("PAYSTACK_SECRET_KEY"))
+PAYSTACK_PUBLIC_KEY = str(os.getenv("PAYSTACK_PUBLIC_KEY"))
 
 
 # Password validation

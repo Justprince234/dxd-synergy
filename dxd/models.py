@@ -15,6 +15,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('dxd:products_list_by_category', args=[self.slug])
+
 SIZE = (
     ('xs', 'XS'),
     ('s', 'S'),
@@ -27,6 +28,12 @@ SIZE = (
 class Product(models.Model):
     """Creates a database instance Item in database."""
     available = models.BooleanField(default=True)
+    black_friday = models.BooleanField(default=False)
+    new_arrival = models.BooleanField(default=True)
+    best_seller = models.BooleanField(default=False)
+    summer = models.BooleanField(default=False)
+    travels = models.BooleanField(default=False)
+    gift = models.BooleanField(default=False)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/')

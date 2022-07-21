@@ -1,0 +1,200 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/shopping.css' %}">
+    <!-- CSS SWEET ALERT LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+
+        <!--********************** HERO SECTION   *************************** -->
+
+        <div id="content-d" class="category">
+            <nav class="sub_category">
+                <ul>
+                    <!-- <li class="">
+                        <a class="fashion_category" data-rel="#content-e" href="/sub_category/women.html">WOMEN</a>
+                    </li> -->
+
+                    <li>
+                        <h5 href="">
+                            25% OFF EVERYTHING!* <br>
+                            <span>With code: WOO25</span>
+                            </h6>
+                    </li>
+                    <!-- <li>
+                        <a class="fashion_category" data-rel="#content-f" href="/sub_category/men.html">MEN</a>
+                    </li> -->
+                </ul>
+            </nav>
+
+            <section class="p-2">
+                <div class="position-relative">
+
+                    <section>
+                        <div class="d-flex justify-content-between pt-3 pb-2 filters_container bg-white">
+                            <div class="d-flex place-items-center pb-3 pl-3">
+                                <div class="select_filters pl-3">
+        
+                                    <div class="d-flex justify-content-center align-items-center mr-2">
+        
+                                        <div class="dropdown">
+                                        </div>
+        
+        
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mr-2">
+        
+                                        <div class="dropdown">
+                                        </div>
+        
+        
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mr-2">
+        
+                                        <div class="dropdown">
+                                        </div>
+        
+        
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mr-2">
+        
+                                        <div class="dropdown">
+                                        </div>
+        
+        
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mr-2">
+        
+                                        <div class="dropdown">
+                                        </div>
+        
+        
+                                    </div>
+                                    <!-- <select name="" id="" class="border py-2 px-3">
+                                        <option value="">Size</option>
+                                    </select>
+                                    <select name="" id="" class="border py-2 px-3">
+                                        <option value="">Style</option>
+                                    </select>
+                                    <select name="" id="" class="border py-2 px-3">
+                                        <option value="">Color</option>
+                                    </select>
+                                    <select name="" id="" class="border py-2 px-3">
+                                        <option value="">Price</option>
+                                    </select> -->
+                                </div>
+                            </div>
+        
+                            
+        
+                            <!-- <div class="pr-3">
+                                <div class="d-flex justify-content-center align-items-center">
+        
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>Sort By</span>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <option value="">Sort By</option>
+                                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                                        </ul>
+                                    </div>
+                
+                
+                                </div>
+                             
+                            </div> -->
+                        </div>
+                        <hr>
+                        <div class="might_like_container">
+                            <div class="d-flex justify-content-between px-2 pb-3">
+                                <h5 class="font-weight-bold">Travels</h5>
+                                <div class="pr-2">
+                            </div>
+                        </div>
+
+                            <!--********************************************************************************************-->
+                            <!--********************** ADDED CAROUSEL TO ALL THE IMAGES IN THIS SECTION ***************************-->
+                            <!--*******************************************************************************************-->
+                            <ul class="">
+                                <li class="">
+                                    <div class="might_like_sub-container">
+                                        {% for product in travels %}
+                                        <div id="myCarousel" class="carousel slide">
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner">
+                                                <!-- <div class="carousel-item active"> -->
+                                                    <a href="{{product.get_absolute_url}}">
+                                                        <img class="image1" src="{{product.photo_main.url}}" alt="">
+                                                    </a>
+                                                </div>
+        
+                                                <!-- <div class="carousel-item bg-dark">
+                                                    <img src="/images/sneakers1.PNG" alt="Second Slide">
+                                                </div>
+        
+                                                <div class="carousel-item">
+                                                    <img src="/images/sneakers1.PNG" alt="Third Slide">
+                                                </div> -->
+        
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                            <div class="might_like_details">
+                                                
+                                                <div class="d-flex justify-content-between w-100">
+                                                    <a class="text-decoration-none" href="{{product.get_absolute_url}}"><h5 class="font-weight-bold product_name">{{product.name}}</h5></a>
+                                                    
+                                                </div>
+                                                <h5 class=" font-weight-bold pb-0">N {{product.price}}</h5>
+                                                <small class="text-dark font-weight-bold d-block">{{product.description}}</small>
+                                            </div>
+                                        </div>
+    
+                                        <!-- <div class="leg_wear"> <img src="/images/leg-wear.jpg" alt=""></div> -->
+                                        <!-- <div class="might_like_details">
+                                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="add_to_bag"><a>Add to Cart</a></button>
+                                            </form>
+                                            <div class="d-flex justify-content-between w-100">
+                                                <a href="{{product.get_absolute_url}}"><h6>{{product.name}}</h6></a>
+                                                <p class=" font-weight-bold pb-0">N {{product.price}}</p>
+                                            </div>
+                                            <small class="text-danger d-block">{{product.description}}</small>
+                                        </div> -->
+                                        {% empty %}
+                                        <h5 class="text-center">No Product listed yet, Please check back later thanks.</h5>
+                                        {% endfor %}
+                                    </div>
+                                </li>
+                            </ul>
+
+                             <!--********************************************************************************************-->
+                            <!--***************ADDED CAROUSEL TO ALL THE IMAGES IN THIS SECTION ENDS HERE ***************************-->
+                            <!--*******************************************************************************************-->
+
+                        </div>
+
+                    </section>
+
+
+
+                </div>
+                <script src="{% static 'js/shopping.js' %}"></script>
+
+{% endblock %}

@@ -4,7 +4,7 @@ from payments.models import Payment
 
 class PaymentAdmin(admin.ModelAdmin):
 
-    list_display = ('ref', 'email', 'amount',  'verified', 'date_created')
+    list_display = ('email', 'amount',  'verified', 'date_created')
     list_display_links = ('email',)
     search_fields = ('email',)
     list_per_page = 25

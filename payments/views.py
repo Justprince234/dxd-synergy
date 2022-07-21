@@ -6,11 +6,12 @@ from django.conf import settings
 from payments.models import Payment
 from django.http import HttpResponse, HttpRequest
 from orders.models import Order
+from cart.cart import Cart
 
 def initiate_payment(request: HttpRequest) -> HttpResponse:
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
-    total_cost = order.get_total_cost()
+    total_cost = order.order_total
     payment = Payment()
     payment.amount = total_cost
     payment.email = order.email
