@@ -33,7 +33,7 @@
         </a>
       </div>
       <div class="checkout">
-        <h3>Order Confirmation Page</h3>
+        <h3 class="">Order Confirmation Page</h3>
       </div>
     </nav>
     
@@ -131,10 +131,10 @@
   
           </form>
   
-          <div class="w-75 mt-3">
+          <div class="w-75 mt-3 ">
             <p class="text-muted privacy_policy">
-              By placing your order you agree to our <a href="">Terms and condition,</a><a href=""> Privacy</a> and
-              <a href="">returns Policy.</a> You also consent
+              By placing your order you agree to our <a href="{% url 'dxd:terms-conditions' %}">Terms and condition,</a><a href="{% url 'dxd:terms-conditions' %}"> Privacy</a> and
+              <a href="{% url 'dxd:delivery-returns' %}">returns Policy.</a> You also consent
               to some of your data being stored by SYNERGY, which may be used to make future shopping experiences better
               for you.
             </p>
@@ -144,21 +144,22 @@
   
       </div>
 
-      <div class="col-lg-4 col-md-6 description_content">
-        <div class="d-flex justify-content-between mb-2 bg-white p-2">
+      <div class="col-lg-4 col-md-6 description_content bg-white p-2">
+        <div class="d-flex mb-0 justify-content-between mb-2 bg-white p-2">
           <h5>MY CART</h5>
-          <p>Please confirm your items in cart!</p>
+          <p class="mb-0">Please confirm your items in cart!</p>
         </div>
+        <hr class="mt-0">
         {% for item in cart %}
         {% with product=item.product %}
         <div class="mb-2 bg-white pl-2 pr-0">
           <div class="d-flex justify-content-between">
             <div class="w-100">
               <div class="d-flex bag_details">
-                <a href="{{product.get_absolute_url}}"><div class="myBag_image"><img src="{{ product.photo_main.url }}" alt=""></div></a>
+                <a href="{{product.get_absolute_url}}"><div class="myBag_image mt-1"><img src="{{ product.photo_main.url }}" alt=""></div></a>
                 <div class="w-100">
-                  <h5><a href="{{product.get_absolute_url}}">{{ product.name }}</a></h5>
-                  <h5>N {{ product.price|floatformat:2 }}</h5>
+                  <h5><a class="text-decoration-none text-dark" href="{{product.get_absolute_url}}">{{ product.name }}</a></h5>
+                  <p class="mb-0 text-muted">N{{ product.price|floatformat:2 }}</p>
                   <div class="d-flex justify-content-between mt-2">
                     <p class="pr-2"> Quantity: {{ item.quantity }}</p>
                     <p class="pr-2"> Colour: {{ product.color }}</p>
@@ -169,7 +170,7 @@
                 <form action="{% url 'cart:cart_remove' product.id %}" method="post">
                   <div>
                     {% csrf_token %}
-                    <button><a type="submit">X</a></button>
+                    <button class="border border-none mr-1 mt-1"><a class="bg-white px-1 py-0 text-danger" type="submit">X</a></button>
                     <!-- <i type="submit" class="fa fa-times pr-1" aria-hidden="true"></i> -->
                   </div>
                 </form>
@@ -198,7 +199,7 @@
         <p>Apply a coupon:</p>
       <form action="{% url 'coupons:apply' %}" method="post">
       {{ coupon_apply_form }}
-      <input type="submit" value="Apply">
+      <input class="bg-info rounded border-0 text-white px-2 py-1" type="submit" value="Apply">
       {% csrf_token %}
       </form>
 
@@ -217,13 +218,19 @@
           <p>You have not added any item to cart.</p>
         </div>
       </div> -->
-      <div class="container">
-        <div class="card text-center" style="position: absolute; width: 18rem; justify-content: center; margin: auto;">
-          <div class="card-body">
-            <h5 class="card-title">Empty Cart!</h5>
-            <p class="card-text">Please add item(s) into cart</p>
-            <a href="{% url 'dxd:home' %}" class="btn btn-primary">Continue shopping</a>
-          </div>
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-6 mx-auto">
+                <div class="card h-100 border-primary justify-content-center">
+                    <div class="pl-3">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Empty Cart!</h5>
+                        <p class="card-text">Please add item(s) into cart</p>
+                        <a href="{% url 'dxd:home' %}" class="btn btn-primary">Continue shopping</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     {% endif %}

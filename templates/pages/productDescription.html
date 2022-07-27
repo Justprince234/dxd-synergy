@@ -62,15 +62,16 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div>
-                                <p class="adidas_original">{{product.name}} <br>{{product.description}}</p>
-                                <h3 class="pounds">N {{product.price}}</h3>
-                                <p class="mt-4"><b>COLOUR</b>: {{product.color}}</p>
+                            <div class="mt-5">
+                                <p class="adidas_original mb-0">{{product.name}} </p>
+                                    <p class="my-0">{{product.description}}</p>
+                                <p class="pounds">N{{product.price}}</p>
+                                <p class="mt-4"><b class="product-color mr-2">COLOUR:</b>{{product.color}}</p>
                                 <form action="{% url 'cart:cart_add' product.id %}" method="post">
                                 {{ cart_product_form }}
-                                <div class="mt-4 w-md-75">
+                                <div class="mt-2 w-md-75">
                                     {% csrf_token %}
-                                    <button class="add_to_bag"><a type="submit">Add to Cart</a></button>
+                                    <button class="add_to_bag py-2 rounded"><a type="submit">Add to Cart</a></button>
                                     <!-- <i class="fa fa-heart-o heart_icon" aria-hidden="true"></i> -->
                                 </div>
                                 </form>
@@ -127,8 +128,9 @@
 
                                 <!-- <div class="leg_wear"> <img src="/images/leg-wear.jpg" alt=""></div> -->
                                 <div class="might_like_details">
-                                    <div class="d-flex justify-content-between w-100">
-                                        <a class="text-decoration-none" href="{{product.get_absolute_url}}"><h6 class="font-weight-bold product_name">{{product.name}}</h6></a>
+                                    <div class="justify-content-between w-100">
+                                        <a class="text-decoration-none text-dark" href="{{product.get_absolute_url}}"><h6 class="font-weight-bold product_name">{{product.name}}</h6></a>
+                                        <small class="text-dark text-muted d-block">{{product.description}}</small>
                                         <p class=" font-weight-bold pb-0">N {{product.price}}</p>
                                     </div>
                                 </div>

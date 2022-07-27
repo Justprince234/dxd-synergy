@@ -5,8 +5,14 @@
 }
 
 body{
+    /* background-color: red; */
     background-color: rgb(238,238,238);
 
+    /* background-color: rgba(0,0,0, 0.5); */
+    /* background-image: url(/static/images/DXD_synergy_logo.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-blend-mode:darken; */
+    /* background-position: center; */
 }
 
 img {
@@ -315,11 +321,13 @@ input[type=checkbox]{
 /* ***************** */
 .myBag_image{
     height: 70px;
+    /* margin-top: 5px; */
     /* width: 150px; */
 }
 
 .bag_details{
     gap: 2rem;
+    /* margin-top: 10px; */
 }
 
 .save_for_later{
@@ -424,6 +432,22 @@ div ul li {
 }
 
 
+@media (max-width: 992px) {
+    .description_content{
+        height: fit-content;
+        position:absolute;
+        margin-bottom: 10px;
+        top: 5rem;
+        
+    }
+
+    .delivery_content{
+        position: absolute;
+        top: 38rem;
+    }
+
+}
+
 @media (max-width:768px) {
     .synergy_logo {
         width: 2rem;
@@ -438,7 +462,9 @@ div ul li {
         height: fit-content;
         position:absolute;
         margin-bottom: 10px;
-        top: 0;
+        top: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .delivery_content{

@@ -51,12 +51,11 @@
                         <img src="{% static 'images/DXD_synergy_logo.jpg' %}" alt="">
                     </a>
                 </div>
-                <a href="{% url 'dxd:home' %}"><h6>Home</h6></a>
+                <a class="text-white" href="{% url 'dxd:home' %}"><h6 class=" font-weight-bold mt-1">Home</h6></a>
                 
                 <li class="women_section dropdowns">
                     
-                    <a class="fashion_category dropbtns" data-rel="#content-e"
-                        href="/sub_category/women.html">WOMEN
+                    <a class="fashion_category dropbtns" data-rel="#content-e" href="">WOMEN
                     </a>
 
                     <div class="dropdown-contents">
@@ -106,8 +105,7 @@
                     </li>
 
                 <li class="men_section dropdowns ">
-                    <a class="fashion_category dropbtns" data-rel="#content-f"
-                        href="/sub_category/men.html">MEN
+                    <a class="fashion_category dropbtns" data-rel="#content-f" href="">MEN
                     </a>
 
                     <div class="dropdown-contents">
@@ -169,12 +167,12 @@
 
                 <li class="li_suitcase pr-3">
                     {% with basketqty=cart|length %}
-                    <a class=" d-flex border px-2 py-1" href="{% url 'cart:cart_summary' %}">
-                        <i class="fa fa-cart-plus checkout_suitcase" aria-hidden="true"></i>
+                    <a class=" d-flex border px-2" href="{% url 'cart:cart_summary' %}">
+                        <i class="fa fa-cart-plus mt-1 checkout_suitcase" aria-hidden="true"></i>
                         {% if basketqty > 0 %}
-                        <h6 id="cart-quantity" class="text-white px-1">{{ basketqty}}</h6>
+                        <h6 id="cart-quantity" class="text-white mt-1 px-1">{{ basketqty}}</h6>
                         {% else %}
-                        <h6 class="text-white px-1">0</h6>
+                        <h6 class="text-white px-1 mt-1">0</h6>
                         {% endif %}
                     </a>
                     {% endwith %} 
@@ -202,11 +200,11 @@
                     <div class="toggle_button_container">
                         <li class="li_women ">
                             <button class="button active" data-rel="#content-a"
-                                href="/sub_category/women.html">WOMEN
+                                href="">WOMEN
                             </button>
                         </li>
                         <li class="li_men">
-                            <button class="button" data-rel="#content-b" href="/sub_category/men.html">MEN</button>
+                            <button class="button" data-rel="#content-b" href="">MEN</button>
                         </li>
                        
                     </div>
@@ -215,7 +213,7 @@
                         
                         <div class="container sub_columns  px-0 mt-2 pb-2 position-absolute d-block overflow-x-hidden  overflow-y-scroll" id="content-a">
                             <li class="side-bar-columns py-1 mt-2">
-                                <a class="text-dark font-weight-bold" href="/index.html">HOME</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:home' %}">HOME</a>
                             </li>
                            
                             <li class="sales_discount">
@@ -229,16 +227,6 @@
                                 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
                                     <button onclick="w1_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Clothing</button>
                                
-                                    <a href="{{categories.0.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.0.name}}</a>
-                                    <a href="{{categories.1.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.1.name}}</a>
-                                    <a href="{{categories.2.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.2.name}}</a>
-                                    <a href="{{categories.3.get_absolute_url}}" class="w3-bar-item w3-button text-dark">{{categories.3.name}}</a>
-                                    <a href="{{categories.4.get_absolute_url}}">{{categories.4.name}}</a>
-                                    <a href="{{categories.5.get_absolute_url}}">{{categories.5.name}}</a>
-                                    <a href="{{categories.6.get_absolute_url}}">{{categories.6.name}}</a>
-                                    <a href="{{categories.7.get_absolute_url}}">{{categories.7.name}}</a>
-                                    <a href="{{categories.8.get_absolute_url}}">{{categories.8.name}}</a>
-                                    <a href="{{categories.9.get_absolute_url}}">{{categories.9.name}}</a>
                                   </div>
                                   
                                   <div class="d-flex justify-content-between align-items-center px-2">
@@ -251,14 +239,11 @@
                             <li class="bg-light py-1 mt-2">
                                 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar2">
                                     <button onclick="w2_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Shoe</button>
-                                    <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
-                                    <a href="#" class="w3-bar-item w3-button">item2</a>
-                                    <a href="#" class="w3-bar-item w3-button">item3</a>
                                   </div>
                                   
                                   <!-- Page Content -->
                                   <div class="d-flex justify-content-between align-items-center px-2">
-                                    <button class="w3-button font-weight-bold" onclick="w2_open()">Shoes</button>
+                                    <button class="w3-button border bg-danger border-none font-weight-bold" onclick="w2_open()">Shoes</button>
                                     <i onclick="w2_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                     <!-- <div class="w3-container">
                                       <h1>My Page</h1>
@@ -281,25 +266,25 @@
                             </li>
     
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">New Arrivals</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:new-arrival' %}">New Arrivals</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Best Sellers</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:best-seller' %}">Best Sellers</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Summers</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:summer' %}">Summers</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Travels</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:travels' %}">Travels</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Gifts</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:gifts' %}">Gifts</a>
                             </li>
                         </div>
     
                         <div class="container sub_columns  px-0 mt-2 pb-2 position-absolute d-block overflow-x-hidden  overflow-y-scroll" id="content-b">
                             <li class="side-bar-columns py-1 mt-2">
-                                <a class="text-dark font-weight-bold" href="/index.html">HOME</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:home' %}">HOME</a>
                             </li>
                            
                             <li class="sales_discount">
@@ -311,32 +296,40 @@
                             <li class="bg-light py-1  mt-2">
     
                                 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar4">
-                                    <button onclick="w4_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Clothing</button>
-                                    <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
-                                    <a href="#" class="w3-bar-item w3-button">item2</a>
-                                    <a href="#" class="w3-bar-item w3-button">item3</a>
+                                    <button onclick="w4_close()" class="w3-bar-item border border-0 bg-transparent w3-button d-flex align-items-center font-weight-bold">
+                                        <i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Clothing</button>
+                                    <a href="{{categories.0.get_absolute_url}}" class="bg-dark py-1 mt-5 side-bar-columns">{{categories.0.name}}</a><br>
+                                    <a href="{{categories.1.get_absolute_url}}" class="bg-dark py-1 mt-5 side-bar-columns">{{categories.1.name}}</a><br>
+                                    <a href="{{categories.2.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.2.name}}</a><br>
+                                    <a href="{{categories.3.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.3.name}}</a><br>
+                                    <a href="{{categories.4.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.4.name}}</a><br>
+                                    <a href="{{categories.5.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.5.name}}</a><br>
+                                    <a href="{{categories.6.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.6.name}}</a><br>
+                                    <a href="{{categories.7.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.7.name}}</a><br>
+                                    <a href="{{categories.8.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.8.name}}</a><br>
+                                    <a href="{{categories.9.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.9.name}}</a><br>
                                   </div>
                                   
                                   <!-- Page Content -->
-                                  <div class="d-flex justify-content-between align-items-center px-2">
-                                    <button class="w3-button font-weight-bold" onclick="w4_open()">Clothing </button>
+                                  <div class="d-flex justify-content-between align-items-center px-3">
+                                    <button class="w3-button text-dark font-weight-bold border border-0 bg-transparent" onclick="w4_open()">Clothing </button>
                                     <i onclick="w4_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                     <!-- <div class="w3-container">
                                       <h1>My Page</h1>
                                     </div> -->
-                                  </div>
-                            </li>
+                                  </div>                                                                                                                                                                                                    
+                            </li>                                                                                                                   
                             <li class="bg-light py-1 mt-2">
-                                <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar5">
-                                    <button onclick="w5_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Shoes</button>
-                                    <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
-                                    <a href="#" class="w3-bar-item w3-button">item2</a>
-                                    <a href="#" class="w3-bar-item w3-button">item3</a>
+                                <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar5">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    <button onclick="w5_close()" class="w3-bar-item border border-0 bg-transparent w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Shoes</button>
+                                    <a href="{{categories.10.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.10.name}}</a><br>
+                                    <a href="{{categories.11.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.11.name}}</a><br>
+                                    <a href="{{categories.12.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.12.name}}</a>
                                   </div>
                                   
                                   <!-- Page Content -->
-                                  <div class="d-flex justify-content-between align-items-center px-2">
-                                    <button class="w3-button font-weight-bold" onclick="w5_open()">Shoes</button>
+                                  <div class="d-flex justify-content-between align-items-center px-3">
+                                    <button class="w3-button text-dark font-weight-bold border border-0 bg-transparent" onclick="w5_open()">Shoes</button>
                                     <i onclick="w5_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                     <!-- <div class="w3-container">
                                       <h1>My Page</h1>
@@ -345,33 +338,35 @@
                             </li>
                             <li class="bg-light py-1 mt-2">
                                 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar6">
-                                    <button onclick="w6_close()" class="w3-bar-item w3-button d-flex align-items-center font-weight-bold"><i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Accessories</button>
-                                    <a href="#" class="w3-bar-item w3-button text-danger">item1</a>
-                                    <a href="#" class="w3-bar-item w3-button">item2</a>
-                                    <a href="#" class="w3-bar-item w3-button">item3</a>
+                                    <button onclick="w6_close()" class="w3-bar-item w3-button border border-0 bg-transparent d-flex align-items-center font-weight-bold">
+                                        <i class="fa fa-angle-left fa-2x pr-2 mb-1" aria-hidden="true"></i>Accessories</button>
+                                    <a href="{{categories.13.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.13.name}}</a><br>
+                                    <a href="{{categories.14.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.14.name}}</a><br>
+                                    <a href="{{categories.15.get_absolute_url}}" class="bg-dark py-1 mt-2 side-bar-columns">{{categories.15.name}}</a>
+                                    
                                   </div>
                                   
-                                  <div class="d-flex justify-content-between align-items-center px-2">
-                                    <button class="w3-button font-weight-bold" onclick="w6_open()">Accessories</button>
+                                  <div class="d-flex justify-content-between align-items-center px-3">
+                                    <button class="w3-button text-dark font-weight-bold border border-0 bg-transparent" onclick="w6_open()">Accessories</button>
                                     <i onclick="w6_open()" class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                     
                                   </div>
                             </li>
     
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">New Arrivals</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:new-arrival' %}">New Arrivals</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Best Sellers</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:best-seller' %}">Best Sellers</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Summers</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:summer' %}">Summers</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Travels</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:travels' %}">Travels</a>
                             </li>
                             <li class="bg-light py-1 mt-2 side-bar-columns">
-                                <a class="text-dark font-weight-bold" href="/index.html">Gifts</a>
+                                <a class="text-dark font-weight-bold" href="{% url 'dxd:gifts' %}">Gifts</a>
                             </li>
                         </div>
                     </div>
@@ -427,8 +422,8 @@
 
                 <div class="col-md-4">
                     <h6>MORE FROM DXD SYNERGY</h6>
-                    <p><a href="">Mobile and DXD SYNERGY apps</a></p>
-                    <p><a href="">Gift vouchers</a></p>
+                    <p><a href="{% url 'dxd:mobile-apps' %}">Mobile and DXD SYNERGY apps</a></p>
+                    <p><a href="{% url 'dxd:coupons' %}">Gift vouchers</a></p>
                     <p><a href="{% url 'dxd:black-friday' %}">Black Friday</a></p>
                 </div>
 

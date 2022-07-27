@@ -35,6 +35,11 @@ def investor_site(request):
     template_name = 'pages/investors-site.html'
     return render(request, template_name)
 
+def gift_vouchers(request):
+    "Renders the gift/voucher page"
+    template_name = 'pages/gifts-vouchers.html'
+    return render(request, template_name)
+
 def career_page(request):
     "Renders the career page"
     careers = Career.objects.filter(available=True)
@@ -87,7 +92,12 @@ def gifts(request):
 
 def terms_condition(request):
     """ Renders terms and conditions"""
-    template_name = "pages/terms-condition.html"
+    template_name = "pages/Terms_Condition.html"
+    return render (request, template_name)
+
+def mobile_apps(request):
+    """ Renders mobile apps page"""
+    template_name = "pages/mobile-apps.html"
     return render (request, template_name)
 
 def delivery_returns(request):

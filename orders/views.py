@@ -5,6 +5,7 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import OrderItem, Order
+from payments.models import Payment
 from cart.cart import Cart
 
 import weasyprint
@@ -26,12 +27,14 @@ def order_create(request):
         if cart.coupon:
             order.coupon = cart.coupon
             order.discount = cart.coupon.discount
+            order.amount = cart.get_total_price_after_discount()
+        order.amount = cart.get_total_price()
         order.save()
         for item in cart:
             OrderItem.objects.create(order=order, product=item['product'],price=item['price'],quantity=item['quantity'])
 
         # clear the cart
-        # cart.clear()
+        cart.clear()
         # set the order in the session
         request.session['order_id'] = order.id
         # redirect for payment

@@ -49,18 +49,29 @@ img {
 }
 
 .adidas_original {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 .pounds {
-    font-weight: 700;
-    font-size: 25px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.product-color {
+    font-weight: 20px !important;
+    font-size: 15px;
 }
 
 .please_select {
     width: 90%;
     height: 40px;
+}
+
+select {
+    width: 80%;
 }
 
 .add_to_bag {
@@ -71,6 +82,7 @@ img {
     width: 67%;
     font-size: 12px;
     background-color: rgb(1, 136, 73);
+    outline: none !important;
 }
 
 .add_to_bag a {
@@ -242,15 +254,15 @@ section>div>div {
     height: 600px;
 }
 
-.adidas_original {
+/* .adidas_original {
     font-size: 20px;
     margin-top: 20px;
-}
+} */
 
-.pounds {
+/* .pounds {
     font-weight: 700;
     font-size: 25px;
-}
+} */
 
 
 .add_to_bag {

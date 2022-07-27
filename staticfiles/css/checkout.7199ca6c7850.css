@@ -1,0 +1,480 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: red; */
+    /* background-color: rgb(238,238,238); */
+
+    background-color: rgba(0,0,0, 0.5);
+    background-image: url("/static/images/DXD_synergy_logo.587b48c5f172.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode:darken;
+    background-position: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: fit-content;
+    /* padding: 10px; */
+    padding-top: 30px;
+    /* width: 320px; */
+    margin: auto;
+
+}
+
+.section{
+    /* background-color: rgb(238,238,238); */
+    /* margin: auto; */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+}
+
+nav{
+    margin: auto;
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+}
+
+.synergy_logo {
+    width: 5rem;
+    /* margin: auto; */
+}
+
+.description_content{
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.details_container{
+    gap: 1rem;
+}
+
+.details_container .items {
+    width: 100px;
+    height: 100px;
+}
+
+select{
+    height: 50px;
+}
+
+.signin_header{
+    background-color: white;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* border-bottom: 1px solid; */
+}
+
+.nigeria_flag{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: .5rem;
+}
+
+.promo_content > h5{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .promo_content > h5{
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+.join_section{
+    border-bottom: 1px solid rgb(7,112,207);
+    width: 50%;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.dropdown{
+    width: 20rem;
+}
+
+.promo_dropdown{
+    width: 22rem;
+}
+
+.signin_section{
+    border-bottom: 1px solid silver;
+    /* border-left: 1px solid silver; */
+    width: 50%;
+    text-align: center;
+}
+
+.signin_section a{
+    border-left: 1px solid silver;
+    text-decoration: none;
+    display: block;
+    font-weight: 800;
+    color: silver;
+}
+
+.sign_up_with{
+    /* text-align: ; */
+    /* margin-top: 30px; */
+}
+
+.sign_up_apps{
+    margin-top: 30px;
+}
+
+
+.adidas_original{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.pounds{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.please_select {
+    width: 75%;
+    height: 40px;
+}
+
+.add_to_bag{
+    border: none;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 700;
+    width: 80%;
+    background-color: rgb(1,136,73);
+}
+
+.heart_icon{
+    background-color: rgb(238,238,238);
+    padding:  5px;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.clone_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.delivery_container {
+    width: fit-content;
+    border: 1px solid rgb(121, 121, 121);
+    padding: 5px 95px 5px 5px;
+}
+
+.might_like_h5 {
+    margin-left: 10.5rem;
+}
+
+.might_like_container li {
+    list-style-type: none;
+}
+
+.might_like_sub-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+
+}
+
+.leg_wear {
+    height: 70%;
+    width: 90%;
+}
+
+.viewed_section {
+    margin: 0 11rem;
+}
+
+.clear_all_button {
+    border: none;
+    font-weight: 700;
+}
+
+.recently_view_container {
+    display: inline-flex;
+    place-items: center;
+}
+
+.recently_view_sub-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    gap: .7rem;
+    margin: auto;
+    justify-content: center;
+    overflow: visible;
+    transition: margin 1s ease-in-out, visibility 1s;
+}
+
+.recently_view_sub-container li {
+    list-style-type: none;
+    display: inline;
+}
+
+.viewed_leg_wear {
+    height: 100%;
+    width: 100%;
+}
+
+.angle_left_arrow {
+    margin-left: 11rem;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    color: silver;
+    font-size: xx-large;
+    font-weight: 700;
+    background-color: white;
+}
+
+.angle_right_arrow {
+    margin-right: 11rem;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    color: silver;
+    font-size: xx-large;
+    font-weight: 700;
+    background-color: white;
+}
+
+/* 
+form{
+    margin: auto;
+} */
+
+.contact_preferences{
+    font-size: 12px;
+}
+
+.tell_us_emails{
+    font-size: 10px;
+}
+
+/* The containers */
+
+.interseted_in{
+    font-weight: 700;
+    color: #878787;
+}
+
+.womenswear, 
+.menswear{
+    font-size: 12px;
+}
+
+.preferences{
+    display: flex;
+    justify-content: space-between;
+}
+
+.selectAll_button{
+    border: none;
+    padding: 3px 10px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+input[type=checkbox]{
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: none;
+}
+
+.select_box_items{
+    margin-top: 30px;
+}
+
+.select_box_items a{
+    text-decoration: none;
+    color: black;
+}
+
+.start_shopping_button {
+    padding: 10px 5px;
+    border: none;
+    width: 80%;
+    background-color: rgb(45, 45, 45);
+
+}
+
+
+
+/* ***************** */
+.myBag_image{
+    height: 70px;
+    /* margin-top: 5px; */
+    /* width: 150px; */
+}
+
+.bag_details{
+    gap: 2rem;
+    /* margin-top: 10px; */
+}
+
+.save_for_later{
+    font-size: 10px;
+}
+
+
+.we_accept{
+    font-size: 15px;
+    font-weight: 700;
+    
+}
+
+div ul li {
+    list-style-type: none;
+}
+
+.visa-electron_image2,
+.checkout_visa,
+.checkout_mastercard,
+.checkout_pay-pal,
+.checkout_american-express{
+    height: 20px;
+    width: 30px;
+    margin: 0px 10px;
+}
+
+.got_discount_p{
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .start_shopping_button {
+        padding: 10px 5px;
+        border: none;
+        width: 100%;
+        font-size: 11px;
+        background-color: rgb(45, 45, 45);
+    
+    }
+}
+
+.start_shopping_button_muted {
+    padding: 10px 0;
+    border: none;
+    width: 100%;
+    background-color: rgb(170,221,197);
+}
+
+.start_shopping_button a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+.start_shopping_button_muted a {
+    color: rgb(204,238,222);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.muted_input {
+    background-color: rgb(238,238,238);
+}
+
+/* footer */
+
+.footer_details{
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 1px solid; */
+}
+
+.privacy_policy a{
+    text-align: center;
+    /* padding-bottom: 20px; */
+    text-decoration: underline;
+    padding: 2px 5px;
+    color: rgb(112, 112, 112);
+    font-size: 15px;
+}
+
+.terms_condition{
+    /* border-bottom: 1px solid silver; */
+    text-align: center;
+}
+
+.terms_condition a{
+    /* border-left: 1px solid silver; */
+    text-decoration: none;
+    padding: 10px 5px;
+    color: rgb(112, 112, 112);
+    font-size: 12px;
+}
+
+
+@media (max-width: 992px) {
+    .description_content{
+        height: fit-content;
+        position:absolute;
+        margin-bottom: 10px;
+        top: 5rem;
+        
+    }
+
+    .delivery_content{
+        position: absolute;
+        top: 38rem;
+    }
+
+}
+
+@media (max-width:768px) {
+    .synergy_logo {
+        width: 2rem;
+        /* margin: auto; */
+    }
+
+    .checkout > h3{
+        font-size: 13px;
+    }
+
+    .description_content{
+        height: fit-content;
+        position:absolute;
+        margin-bottom: 10px;
+        top: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .delivery_content{
+        position: absolute;
+        top: 38rem;
+    }
+
+    /* .footer {
+        position: absolute;
+        top: 50rem;
+    } */
+}
+

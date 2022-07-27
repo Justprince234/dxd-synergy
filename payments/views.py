@@ -11,7 +11,7 @@ from cart.cart import Cart
 def initiate_payment(request: HttpRequest) -> HttpResponse:
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
-    total_cost = order.order_total
+    total_cost = order.amount
     payment = Payment()
     payment.amount = total_cost
     payment.email = order.email

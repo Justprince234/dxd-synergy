@@ -29,6 +29,7 @@ class Order(models.Model):
     coupon = models.ForeignKey(Coupon, related_name='orders', null=True, blank=True, on_delete=models.SET_NULL)
     discount = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
     created = models.DateTimeField(auto_now_add=True)
+    amount = models.PositiveIntegerField(default=0.00)
     paid = models.BooleanField(default=False)
     status = models.CharField(max_length = 100, choices = choices, default="In Progress")
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)

@@ -135,6 +135,7 @@ section > div > div {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 
 }
 
@@ -147,6 +148,7 @@ section > div > div {
 .might_like_details {
     width: 90%;
     margin: auto;
+    margin-left: 0;
     
 }
 
@@ -297,7 +299,10 @@ small {
 }
 
 .product_name {
-    font-size: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: .5rem;
 }
 
 /* custom select button  ends here*/
@@ -359,6 +364,7 @@ small {
         display: grid;
         justify-content: unset;
         grid-template-columns: repeat(4, 1fr);
+
     }
 
     .viewed_section {

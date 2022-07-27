@@ -283,7 +283,7 @@ form {
 .li_suitcase {
     display: flex;
     align-items: center;
-    /* margin-right: -2rem; */
+    margin-right: -2rem;
 }
 
 .checkout_suitcase {
@@ -1098,9 +1098,9 @@ footer .visa_image,
 }
 
 @media (max-width:768px) {
-    .footer_information {
+    /* .footer_information {
         display: none !important;
-    }
+    } */
 
 }
 
