@@ -4,7 +4,7 @@ from django.http import Http404
 from django.db.models import Q
 
 
-from .models import Category, Product, Career
+from .models import Category, Product, Career, Investor
 from orders.models import Order
 from cart.forms import CartAddProductForm
 
@@ -32,7 +32,13 @@ def corporate_responsibility(request):
 
 def investor_site(request):
     "Renders the investor's site page"
+    investors = Investor.objects.filter(available=True)
     template_name = 'pages/investors-site.html'
+    return render(request, template_name, {'investors':investors})
+
+def help(request):
+    "Renders the help page"
+    template_name = 'pages/help.html'
     return render(request, template_name)
 
 def gift_vouchers(request):

@@ -4,7 +4,8 @@ from django.contrib import admin
 from .models import (
     Category,
     Product,
-    Career
+    Career,
+    Investor
 )
 
 admin.site.site_header = 'DXD SYNERGY'
@@ -35,3 +36,8 @@ class CareerAdmin(admin.ModelAdmin):
     list_display = ('title', 'available')
 
 admin.site.register(Career, CareerAdmin)
+
+class InvestorAdmin(admin.ModelAdmin):
+    list_display = ('title', 'available')
+
+admin.site.register(Investor, InvestorAdmin)

@@ -1,4 +1,3 @@
-from re import template
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.conf import settings
@@ -11,7 +10,7 @@ from cart.cart import Cart
 def initiate_payment(request: HttpRequest) -> HttpResponse:
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
-    total_cost = order.amount
+    total_cost = order.get_total_cost()
     payment = Payment()
     payment.amount = total_cost
     payment.email = order.email
@@ -28,5 +27,5 @@ def verify_payment(request: HttpRequest, ref:str) -> HttpResponse:
     if verified:
         messages.success(request, 'Verified')
     messages.error(request, 'Verification Failed')
-    template_name = 'pages/index.html'
+    template_name = 'pages/success.html'
     return render(request, template_name)

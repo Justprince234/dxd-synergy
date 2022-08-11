@@ -11,6 +11,7 @@ from django.contrib import messages
 
 @require_POST
 def coupon_apply(request):
+    # current_user  = request.session.id
     now = timezone.now()
     form = CouponApplyForm(request.POST)
     if form.is_valid():

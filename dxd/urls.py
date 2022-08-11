@@ -18,6 +18,7 @@ urlpatterns = [
     path('coupons/', views.gift_vouchers, name='coupons'),
     path('summer/', views.summer, name='summer'),
     path('gifts/', views.gifts, name='gifts'),
+    path('help/', views.help, name='help'),
     path('travels/', views.travels, name='travels'),
     path('terms-conditions/', views.terms_condition, name='terms-conditions'),
     path('delivery-returns/', views.delivery_returns, name='delivery-returns'),

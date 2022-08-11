@@ -336,6 +336,7 @@ form {
 
 .sub_columns {
     width: 90% !important;
+    left: .6rem;
 }
 
 
@@ -354,7 +355,7 @@ form {
 
 @media (max-width: 768px) {
     .w3-sidebar {
-        width: 80% !important;
+        width: 250px !important;
        
     }
     
@@ -412,8 +413,18 @@ form {
 
 .sidebar li a:hover {
     color: white;
-    background: #1b1b1b;
+    /* background: #1b1b1b; */
 }
+
+.sidebar_items >div >a {
+    margin: 10px;
+    padding: 0;
+}
+
+button {
+    outline: none !important;
+}
+
 
 li .btn1 {
     color: rgb(253, 114, 137);
@@ -534,7 +545,7 @@ li .btn2 {
     margin: 0;
     display: flex;
     vertical-align: top;
-    width: 100%;
+    width: 99%;
     height: 50px;
     border-bottom: 1px solid rgba(45, 45, 45, .1);
     box-sizing: border-box;

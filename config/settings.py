@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third party apps
     'crispy_forms',
+    'django_extensions',
+    'sslserver',
     # Media Cloudinary
     'cloudinary',
     'cloudinary_storage',
@@ -115,6 +117,14 @@ CLOUDINARY_STORAGE = {
 PAYSTACK_SECRET_KEY = str(os.getenv("PAYSTACK_SECRET_KEY"))
 PAYSTACK_PUBLIC_KEY = str(os.getenv("PAYSTACK_PUBLIC_KEY"))
 
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+
+DEFAULT_FROM_EMAIL = str(os.getenv("DEFAULT_FROM_EMAIL"))
+EMAIL_HOST = str(os.getenv("EMAIL_HOST"))
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = str(os.getenv("EMAIL_HOST_USER"))
+EMAIL_HOST_PASSWORD = str(os.getenv("EMAIL_HOST_PASSWORD"))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

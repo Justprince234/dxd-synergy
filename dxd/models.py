@@ -61,3 +61,12 @@ class Career(models.Model):
     
     def __str__(self):
         return self.title
+
+class Investor(models.Model):
+    title = models.CharField(max_length=150)
+    description = models.TextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    available = models.BooleanField(default=True)
+    
+    def __str__(self):
+        return self.title

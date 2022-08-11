@@ -6,7 +6,7 @@ from payments.paystack import PayStack
 class Payment(models.Model):
     ref = models.CharField(max_length=200)
     email = models.EmailField()
-    amount = models.PositiveIntegerField()
+    amount = models.PositiveIntegerField(editable=False)
     verified = models.BooleanField(default=False)
     date_created = models.DateTimeField(auto_now_add=True)
 

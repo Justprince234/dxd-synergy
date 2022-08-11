@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    /* color: white; */
+}
+
+
+body {
+    height: 100vh;
+}
+
+.image_content {
+    height: 100px;
+    width: 150px;
+    margin: auto;
+}
+
+
+.payment_button {
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 700;
+    width: 150px;
+    margin: auto;
+    font-size: 10px;
+    background-color: rgb(1, 136, 73);
+}
+
+
+
+
+
+
+
+

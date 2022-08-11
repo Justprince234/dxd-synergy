@@ -18,6 +18,11 @@ django-heroku = "*"
 django-environ = "*"
 django-weasyprint = "*"
 python-dotenv = "*"
+xhtml2pdf = "*"
+django-extensions = "*"
+werkzeug = "*"
+django-sslserver = "*"
+django-smtp-ssl = "*"
 
 [dev-packages]
 
