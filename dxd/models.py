@@ -67,6 +67,9 @@ class Investor(models.Model):
     description = models.TextField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     available = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name_plural = "Investor Site"
     
     def __str__(self):
         return self.title
