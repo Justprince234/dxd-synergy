@@ -11,14 +11,15 @@ img {
 }
 
 .about_us_image {
-    background-image: url(/images/topman_image.jpg);
-    height: 30rem;
+    background-image: url(/static/images/Twitter\ banner.jpg);
+    height: 27.5rem;
     padding-top: 10rem;
 
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: darken;
-    background-size: cover;
+    background-size: 83rem;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .containers {
@@ -29,7 +30,7 @@ img {
 }
 
 .logo {
-    height: 25rem;
+    /* height: 25rem; */
     width: 25rem;
     
 }

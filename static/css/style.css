@@ -699,6 +699,9 @@ li .btn2 {
     position: relative;
     height: 45rem;
     margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
     /* z-index: -1; */
 }
 
