@@ -103,12 +103,12 @@ CART_SESSION_ID = 'cart'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+    }
+}
 
 POSTGRES_DB = str(os.getenv("POSTGRES_DB"))
 POSTGRES_PASSWORD = str(os.getenv("POSTGRES_PASSWORD"))
