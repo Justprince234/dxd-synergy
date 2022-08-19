@@ -691,7 +691,7 @@ li .btn2 {
 }
 
 .hero_section {
-    background-image: url('https://content.asos-media.com/-/media/homepages/unisex/generic-hp/archive/oct-2021/microsoftteams-image-(10).png');
+    background-image: url(/static/images/Web.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

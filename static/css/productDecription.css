@@ -35,11 +35,11 @@ img {
 }
 
 .carousel-control-prev-icon {
-    background-image: url('/images/angle-left.png');
+    background-image: url(/static/images/angle-left.png);
 }
 
 .carousel-control-next-icon {
-    background-image: url('/images/angle-right.png');
+    background-image: url(/static/images/angle-right.png);
 }
 
 .black-sneakers {
