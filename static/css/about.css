@@ -35,6 +35,10 @@ img {
     
 }
 
+.aabout-us {
+    background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px);
+}
+
 
 .facebook_icon1 {
     font-size: 15px;

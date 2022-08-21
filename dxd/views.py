@@ -4,7 +4,7 @@ from django.http import Http404
 from django.db.models import Q
 
 
-from .models import Category, Product, Career, Investor
+from .models import Category, Product, Career, Investor, HomePageCarousel
 from orders.models import Order
 from cart.forms import CartAddProductForm
 
@@ -13,7 +13,7 @@ from cart.forms import CartAddProductForm
 def home(request):
     """Displays the index page."""
     template_name = 'pages/index.html'
-    context = {'categories': Category.objects.all()}
+    context = {'categories': Category.objects.all(), 'carousels': HomePageCarousel.objects.filter(available=True)}
     return render(request, template_name, context)
 
 def track_order(request):

@@ -5,7 +5,8 @@ from .models import (
     Category,
     Product,
     Career,
-    Investor
+    Investor,
+    HomePageCarousel
 )
 
 admin.site.site_header = 'DXD SYNERGY'
@@ -41,3 +42,4 @@ class InvestorAdmin(admin.ModelAdmin):
     list_display = ('title', 'available')
 
 admin.site.register(Investor, InvestorAdmin)
+admin.site.register(HomePageCarousel)

@@ -73,3 +73,16 @@ class Investor(models.Model):
     
     def __str__(self):
         return self.title
+
+class HomePageCarousel(models.Model):
+    name = models.CharField(max_length=100)
+    message = models.CharField(max_length=100)
+    message1 = models.CharField(max_length=100)
+    message2 = models.CharField(max_length=100)
+    available = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name_plural = "Hompage Message"
+    
+    def __str__(self):
+        return self.name
