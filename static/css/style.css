@@ -691,12 +691,12 @@ li .btn2 {
 }
 
 .hero_section {
-    background-image: url(/static/images/Web.jpg);
+    background-image: url(/static/images/DXD_SYNERGY_background_image.avif);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     color: white;
-    /* position: relative; */
+    position: relative;
     height: 45rem;
     margin: auto;
 
