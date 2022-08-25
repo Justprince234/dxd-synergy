@@ -3,47 +3,46 @@
 
 {% block content %}
 
-        <!--********************** HERO SECTION  STARTs *************************** -->
-        <link rel="stylesheet" href="{% static 'css/help.css' %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--********************** HERO SECTION  STARTs *************************** -->
+<link rel="stylesheet" href="{% static 'css/help.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-        <div id="content-d" class="category">
-            <div class="help-hero-section">
-                <h3 class="text-center text-white font-weight-bold mb-0">How can we help?</h3>
+<div id="content-d" class="category">
+    <section>
+        <div class="about_us_image">
+            <h1 class="text-center text-white font-weight-bold mb-0 display-3">How can we help?</h1>
 
-                <div class="d-flex justify-content-center">
-                    <form action="" class="py-2 form1">
-                        <div class="form-group input_field_area input_field mb-0">
-                            
-                        </div>
-                    </form>
-                </div>
+            <div class="d-flex justify-content-center">
+                <form action="" class="py-2 form1">
+                    <div class="form-group input_field_area input_field mb-0">
+
+                    </div>
+                </form>
             </div>
-
-            <div class="pb-5">
-                <div class="row help-sub-section justify-content-center">
-                    <h3 class="font-weight-bold mb-0">Help Topics</h3>
-                    <hr class="mt-2">
-                </div>
-                <br>
-                <br>
-                <div class="row help-sub-section justify-content-center">
-                    <p>Follow <a style="color: blue;" href="{% url 'dxd:terms-conditions' %}">here</a> to access FAQs </p>
-
-                </div>
-            </div>
-            <div class="text-center text-muted" style="font-size: 10px;">
-                <p class="mb-0">Help? Call: <span class="font-weight-bold">(+234) 703 442 9448</span></p>
-                <p class="mb-0">E-mail: <span class="font-weight-bold">contact@dxd-synergy.com</span></p>
-                <p>Copyright © <span class="font-weight-bold ">2022</span> DXD-Synergy. All rights reserved</p>
-            </div>
-
-            <section>
-
-            </section>
-
         </div>
+
+        <div class="pb-5 aabout-us">
+            <div class="row help-sub-section justify-content-center">
+                <h3 class="font-weight-bold mb-0">Help Topics</h3>
+                <hr class="mt-2">
+            </div>
+            <br>
+            <br>
+            <div class="row help-sub-section justify-content-center">
+                <p>Follow <a style="color: blue;" href="{% url 'dxd:terms-conditions' %}">here</a> to access FAQs </p>
+
+            </div>
+        </div>
+        <div class="text-center text-muted" style="font-size: 10px;">
+            <p class="mb-0">Help? Call: <span class="font-weight-bold">(+234) 703 442 9448</span></p>
+            <p class="mb-0">E-mail: <span class="font-weight-bold">contact@dxd-synergy.com</span></p>
+            <p class="mb-0 pb-3">Copyright © <span class="font-weight-bold ">2022</span> DXD-Synergy. All rights reserved</p>
+        </div>
+
+    </section>
+
+</div>
 {% endblock %}

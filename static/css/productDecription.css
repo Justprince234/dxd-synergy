@@ -9,6 +9,11 @@ img {
     width: 100%;
 }
 
+.product-container {
+    background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px);
+
+}
+
 .carousel_overall {
     margin-left: 0;
     margin-right: 0;

@@ -10,18 +10,11 @@ img {
     /* color: white; */
 }
 
-.help-hero-section {
-    background-image: url(/images/tall-buildings.jpg);
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: darken;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 15rem;
-    position: relative;
-    top: -1rem;
-    padding-top: 5rem;
+section {
+    background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px);
 }
+
+
 
 .help-sub-section {
     gap: 2rem;
@@ -32,6 +25,18 @@ img {
     color: black !important;
     text-decoration: none !important;
     transition: .5s;
+}
+
+.about_us_image {
+    background-image: url(/static/images/Twitter\ banner.jpg);
+    height: 27.5rem;
+    padding-top: 10rem;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .help_content:hover {

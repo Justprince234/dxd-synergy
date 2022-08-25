@@ -30,12 +30,9 @@
     <main>
         <div class="top_navbar">
             <ul>
-                <li class="market_place">
-                    <a href="">Marketplace</a>
-                </li>
 
                 <li>
-                    <a href="">Help & FAQs</a>
+                    <a href="{% url 'dxd:terms-conditions' %}">Help & FAQs</a>
                 </li>
 
                 <li>
@@ -727,21 +724,23 @@
 
         <div id="content-d" class="category">
 
-            <section>
+            <section class="aabout-us">
 
                 <div class="about_us_image  ">
                     <div class="d-flex justify-content-center align-items-center text-white">
                         <!-- <h1>DXD SYNERGY</h1> -->
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-primary"><a href="#contact_us" class="text-decoration-none text-white font-weight-bold">Contact Us</a></button>
+                        <h1 class="font-weight-bold text-white"></h1>
+
+                        <!-- <button class="btn btn-primary"><a href="{% url 'dxd:contact-us' %}" class="text-decoration-none text-white font-weight-bold">Contact Us</a></button> -->
                     </div>
                 </div>
 
                 <div class="containers py-5">
                     <div class="row justify-content-around">
                         <div class="col-md-5">
-                            <h3 class="font-weight-bold">ABOUT US</h3>
+                            <h3 class="font-weight-bold display-3">ABOUT US</h3>
                             <p class="text-justify">DXD SYNERGY  is a world class Fashion and Lifestyle brand that is committed to continuously improve its products and brands to meet customers satisfaction with Originality and Authenticity in products and design never to be compromised.
 
                                 Under the vision of the creative designer and director Oben, Joseph Tchamabeu. 
@@ -772,7 +771,7 @@
 
 
         <footer class="bg-dark">
-            <div class="containers pb-4 pt-5" id="contact_us">
+            <!-- <div class="containers pb-4 pt-5" id="contact_us">
                 <h1 class="text-white font-weight-bold text-center">CONTACT US</h1>
                 <p class="text-white text-center">Send us comments...</p>
 
@@ -833,11 +832,12 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
           <div class="text-white text-center border-top border-light py-2"><i class="fa fa-copyright" aria-hidden="true"></i>DXD SYNERGY</div>
         </footer>
     </main>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

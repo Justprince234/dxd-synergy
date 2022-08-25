@@ -30,6 +30,11 @@ def corporate_responsibility(request):
     template_name = 'pages/corp-responsibility.html'
     return render(request, template_name)
 
+def contact_us(request):
+    "Renders the contact us page."
+    template_name = 'pages/contact-us.html'
+    return render(request, template_name)
+
 def investor_site(request):
     "Renders the investor's site page"
     investors = Investor.objects.filter(available=True)

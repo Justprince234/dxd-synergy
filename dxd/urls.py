@@ -7,6 +7,7 @@ app_name = 'dxd'
 urlpatterns = [
     path('', views.home, name='home'),
     path('about-us/', views.about_us, name='about-us'),
+    path('contact-us/', views.contact_us, name='contact-us'),
     path('track-order/', views.track_order, name='track-order'),
     path('corporate-responsibility/', views.corporate_responsibility, name='corporate-responsibility'),
     path('investor-site/', views.investor_site, name='investor-site'),

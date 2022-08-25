@@ -196,6 +196,11 @@
           <h5 class="pr-1">TOTAL</h5>
           <h5>N{{ cart.get_total_price|floatformat:2 }}</h5>
         </div>
+        <a href="{% url 'dxd:home' %}">
+          <input class="bg-info rounded border-0 text-white px-2 py-1" type="submit" value="Continue Shopping">
+        </a>
+        <br>
+        <br>
         {% endif %}
         <p>Apply a coupon:</p>
       <form action="{% url 'coupons:apply' %}" method="post">

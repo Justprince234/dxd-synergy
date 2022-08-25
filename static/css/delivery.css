@@ -9,9 +9,9 @@ img {
     height: 100%;
 }
 
-main {
+.aabout-us {
 
-    background-color: rgb(242, 242, 242);
+    background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px);
 }
 
 button .active {
@@ -20,14 +20,14 @@ button .active {
 
 section {
     width: 70%;
-    background-color: rgb(242, 242, 242);
+    /* background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px); */
     margin: auto;
 }
 
 @media (max-width:768px) {
     section {
         width: 100%;
-        background-color: rgb(242, 242, 242);
+        /* background-color: rgb(242, 242, 242); */
         margin: auto;
     }
 }

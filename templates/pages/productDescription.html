@@ -12,25 +12,132 @@
         <!--********************** HERO SECTION   *************************** -->
 
         <div id="content-d" class="category">
-            <nav class="sub_category">
-                <ul>
-                    <!-- <li class="">
-                        <a class="fashion_category" data-rel="#content-e" href="/sub_category/women.html">WOMEN</a>
-                    </li> -->
+            <div class="container-lg bg-success">
+                {% for carousel in carousels %}
+                <div id="myCarousel demo" data-ride="carousel" class="carousel slide">
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="sub_category">
+                                <ul>
+                
+                                    <li>
+                                        <h4 href="">
+                                            <h3 class="pl-4 ml-3 font-weight-bold">{{carousel.name}}</h3><br>
+                                            <p>{{carousel.message}}</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
 
-                    <li>
-                        <h5 href="">
-                            25% OFF EVERYTHING!* <br>
-                            <span>With code: WOO25</span>
-                            </h6>
-                    </li>
-                    <!-- <li>
-                        <a class="fashion_category" data-rel="#content-f" href="/sub_category/men.html">MEN</a>
-                    </li> -->
-                </ul>
-            </nav>
+                        <div class="carousel-item bg-dark">
+                            <div class="sub_category bg-danger">
+                                <ul>
+                
+                                    <li>
+                                        <h4 class="justify-content-center align-items-center" href="">
+                                            <h3 class="pl-4 ml-3 font-weight-bold">{{carousel.name}}</h3><br>
+                                            <p>{{carousel.message1}}</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
 
-            <section class="p-2">
+                        <div class="carousel-item">
+                            <div class="sub_category bg-success">
+                                <ul>
+                
+                                    <li>
+                                        <h4 class="justify-content-center align-items-center" href="">
+                                            <h3 class="font-weight-bold">{{carousel.name}}</h3><br>
+                                            <p>{{carousel.message2}}</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Carousel controls -->
+                    <!-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a> -->
+                </div>
+                {% empty %}
+                <div id="myCarousel demo" data-ride="carousel" class="carousel slide bg-white">
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="sub_category">
+                                <ul>
+                
+                                    <li>
+                                        <h4 href="">
+                                            <h3 class="pl-4 ml-3">DXD SYNERGY</h3><br>
+                                            <p>Dare To Be Extraordinaire...Living The Art</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item bg-dark">
+                            <div class="sub_category bg-danger">
+                                <ul>
+                
+                                    <li>
+                                        <h4 href="">
+                                            <h3 class="pl-4 ml-3 text-white">DXD SYNERGY</h3><br>
+                                            <p class="text-white">Dare To Be Extraordinaire...Living The Art</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="sub_category bg-success">
+                                <ul>
+                
+                                    <li>
+                                        <h4 class="justify-content-center" href="">
+                                            <h3 class="pl-4 ml-3 text-white">DXD SYNERGY</h3><br>
+                                            <p class="text-white">Dare To Be Extraordinaire...Living The Art</p>
+                                        </h4>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Carousel controls -->
+                    <!-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a> -->
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <section class="product-container">
                 <div class="position-relative">
                     <div class="row justify-content-center carousel_overall">
                         <div class="mt-5 side_image_container">
@@ -62,7 +169,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="mt-5">
+                            <div class="mt-5 bg-white p-3 rounded">
                                 <p class="adidas_original mb-0">{{product.name}} </p>
                                     <p class="my-0">{{product.description}}</p>
                                 <p class="pounds">N{{product.price}}</p>
@@ -91,17 +198,17 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr style="border: 6px solid white;">
 
-                    <section>
+                    <div class="p-3">
                         <div class="d-flex mb-3">
                             <h5 class="might_like_h5 px-3 font-weight-bold">Related Products</h5>
                         </div>
             
                         <ul class="might_like_sub-container">
                             {% for product in related_products %}
-                            <li>
-                                <div id="myCarousel1" class="carousel slide">
+                            <li class="bg-white">
+                                <div id="myCarousel1" class="carousel slide ">
                                     <!-- Wrapper for carousel items -->
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -137,7 +244,7 @@
                             </li>
                             {% endfor %}
                         </ul>
-
+                    </div>
                 </div>
             </section>
             <!-- <span id="points">...</span> -->

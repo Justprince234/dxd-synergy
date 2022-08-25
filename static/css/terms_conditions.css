@@ -10,9 +10,25 @@ img {
     object-fit: cover;
 }
 
+section {
+    background: repeating-linear-gradient(55deg, rgba(231, 231, 231, 0.445), rgba(209, 209, 209, 0.363) 5px, rgb(209, 209, 209) 8px);
+}
+
 .containers {
     width: 60%;
     margin: auto;
+}
+
+.about_us_image {
+    background-image: url(/static/images/Twitter\ banner.jpg);
+    height: 27.5rem;
+    padding-top: 10rem;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: 83rem;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1 {
